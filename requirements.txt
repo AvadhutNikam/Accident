@@ -1,8 +1,7 @@
-Flask==3.0.0
-pandas==2.1.4
-numpy==1.26.2
-scikit-learn==1.3.2
-pickle5==0.0.11
-werkzeug==3.0.1
-requests==2.31.0
+Flask
+pandas
+numpy
+scikit-learn
+werkzeug
+requests
 xgboost

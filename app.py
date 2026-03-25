@@ -103,9 +103,7 @@ def load_city_model(city_id):
     
     history_mgr = RouteHistoryManager(storage_path=f'{data_path}/route_history.json')
     
-    # Note: AccidentReporter still uses SQLite in this project, but we can point to city-specific DBs
-    # Or keep a unified DB and filter by city if we updated it. 
-    # For this task, we'll try to follow the guide's intent of city-specific storage.
+    
     accident_rep = AccidentReporter(db_path=f'{data_path}/accidents.db')
     
     result = (model_data, segments_df, segment_risk_scores, history_mgr, accident_rep)
@@ -341,19 +339,18 @@ def get_safe_routes():
     start_coords = get_coords(start_input, city_id)
     end_coords = get_coords(end_input, city_id)
     
-    # For Google Maps (if coords found, use them for fallback)
+    
     start_loc = start_input if isinstance(start_input, str) else start_coords
     end_loc = end_input if isinstance(end_input, str) else end_coords
 
     routes = []
     
-    # Check if we can use real Google Maps data
+    
     if traffic_client and GMAPS_API_KEY and start_loc and end_loc:
         traffic_result = traffic_client.get_route_with_traffic(start_loc, end_loc)
         if traffic_result.get('success'):
             for idx, r in enumerate(traffic_result['routes']):
-                # Simple fallback: use endpoints for risk if no polyline decoder
-                # If start_coords/end_coords are None (failed geocode), fallback to default
+                
                 sc = start_coords or [19.05, 72.82]
                 ec = end_coords or [19.06, 72.86]
                 wp = generate_route_waypoints(sc, ec)
@@ -439,8 +436,7 @@ def get_time_risk_forecast():
     base_result = calculate_route_risk(wp, vehicle_type, city_id)
     base_score = base_result.get('risk_score', 40)
     
-    # Assume a default road risk encoding for simplicity if not easily mapped
-    # Average road risk level based on the route
+    
     road_risk_encoded = 1 # Medium baseline
     
     predictions = []

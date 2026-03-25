@@ -33,6 +33,12 @@ const VEHICLE_INFO = {
 // ═══════════════════════════════════════════════════════
 
 function initMap() {
+    const mapElement = document.getElementById('map');
+    if (!mapElement) {
+        console.error('Map element not found');
+        return;
+    }
+
     // 🎨 BASE TILES
     const darkTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         attribution: '© OpenStreetMap contributors © CARTO',
@@ -52,8 +58,12 @@ function initMap() {
     map = L.map('map', {
         center: [19.0760, 72.8777],
         zoom: 11,
-        layers: [darkTile]
+        layers: [streetTile],
+        zoomControl: false // We'll add it manually to position it better
     });
+
+    // Add zoom control at top right
+    L.control.zoom({ position: 'topright' }).addTo(map);
 
     // 🛠️ LAYER CONTROL
     const baseMaps = {
@@ -63,6 +73,12 @@ function initMap() {
     };
 
     L.control.layers(baseMaps, null, { position: 'bottomright' }).addTo(map);
+
+    // Resize Observer to handle dynamic height changes
+    const resizeObserver = new ResizeObserver(() => {
+        if (map) map.invalidateSize();
+    });
+    resizeObserver.observe(mapElement);
 
     // Initialize Geocoder
     geocoder = L.Control.Geocoder.nominatim();
@@ -86,6 +102,9 @@ function initMap() {
 
     // Initialize city selector
     initCitySelector();
+
+    // Final check for size
+    setTimeout(() => map.invalidateSize(), 500);
 }
 
 async function initCitySelector() {
@@ -122,7 +141,8 @@ async function switchCity(cityId) {
     // Reset route results
     document.getElementById('routeResults').style.display = 'none';
     document.getElementById('routeDetails').style.display = 'none';
-    document.getElementById('riskForecastSection').style.display = 'none';
+    const forecastSection = document.getElementById('riskForecastSection');
+    if (forecastSection) forecastSection.style.display = 'none';
 
     try {
         const response = await fetch(`/api/locations?city=${cityId}`);
@@ -213,7 +233,8 @@ document.getElementById('routeForm')?.addEventListener('submit', async (e) => {
         return;
     }
 
-    document.getElementById('loadingIndicator').style.display = 'block';
+    const loader = document.getElementById('loadingIndicator');
+    if (loader) loader.style.display = 'block';
 
     // Reveal the Save and Share buttons
     const saveBtn = document.getElementById('saveFavoriteBtn');
@@ -260,7 +281,8 @@ document.getElementById('routeForm')?.addEventListener('submit', async (e) => {
     } catch (err) {
         showToast('error', err.message || 'Failed to load routes');
     } finally {
-        document.getElementById('loadingIndicator').style.display = 'none';
+        const loader = document.getElementById('loadingIndicator');
+        if (loader) loader.style.display = 'none';
     }
 
     // New: Fetch Time-Based Risk Forecast
@@ -281,7 +303,8 @@ async function fetchTimeRisk(start, end, vehicleType) {
         const data = await response.json();
         if (data.predictions) {
             renderRiskChart(data.predictions, data.optimal_time);
-            document.getElementById('riskForecastSection').style.display = 'block';
+            const section = document.getElementById('riskForecastSection') || document.getElementById('routeDetails');
+            if (section) section.style.display = 'block';
         }
     } catch (err) {
         console.error('Failed to fetch time-based risk:', err);
@@ -310,15 +333,15 @@ function renderRiskChart(predictions, optimal) {
             datasets: [{
                 label: 'Route Risk Score (%)',
                 data: scores,
-                borderColor: '#38ef7d',
-                backgroundColor: bgGradient,
+                borderColor: '#6366f1',
+                backgroundColor: 'rgba(99, 102, 241, 0.1)',
                 fill: true,
                 tension: 0.4,
-                borderWidth: 3,
-                pointBackgroundColor: '#fff',
-                pointBorderColor: '#38ef7d',
+                borderWidth: 2,
+                pointBackgroundColor: '#6366f1',
+                pointBorderColor: '#fff',
                 pointHoverRadius: 6,
-                pointRadius: 4
+                pointRadius: 3
             }]
         },
         options: {
@@ -327,11 +350,11 @@ function renderRiskChart(predictions, optimal) {
             plugins: {
                 legend: { display: false },
                 tooltip: {
-                    backgroundColor: 'rgba(20, 20, 40, 0.9)',
-                    titleColor: '#fff',
-                    bodyColor: '#fff',
-                    borderColor: 'rgba(255, 255, 255, 0.2)',
-                    borderWidth: 1,
+                    backgroundColor: '#0f172a',
+                    titleFont: { family: 'Outfit', size: 13 },
+                    bodyFont: { family: 'Inter', size: 12 },
+                    padding: 10,
+                    cornerRadius: 8,
                     displayColors: false,
                     callbacks: {
                         label: (context) => `Risk: ${context.parsed.y}%`
@@ -342,12 +365,12 @@ function renderRiskChart(predictions, optimal) {
                 y: {
                     beginAtZero: true,
                     max: 100,
-                    grid: { color: 'rgba(255, 255, 255, 0.1)' },
-                    ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { family: 'Poppins' } }
+                    grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                    ticks: { color: '#475569', font: { family: 'Inter', size: 10 } }
                 },
                 x: {
                     grid: { display: false },
-                    ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { family: 'Poppins' } }
+                    ticks: { color: '#475569', font: { family: 'Inter', size: 10 } }
                 }
             }
         }
@@ -356,11 +379,11 @@ function renderRiskChart(predictions, optimal) {
     // Update optimal time badge
     const badge = document.getElementById('optimalTimeBadge');
     if (optimal.offset === 0) {
-        badge.innerHTML = `<span class="optimal-departure-badge bg-success">Optimal: Leave Now!</span>`;
+        badge.innerHTML = `<span class="security-badge">Optimal: Leave Now</span>`;
     } else {
         const riskDiff = (predictions[0].risk_score - optimal.risk_score).toFixed(0);
-        badge.innerHTML = `<span class="optimal-departure-badge" style="background:var(--primary-gradient)">
-            Optimal: Leave at ${optimal.hour} (${riskDiff}% safer)</span>`;
+        badge.innerHTML = `<span class="security-badge" style="color:var(--accent-primary); background:var(--accent-primary-glow)">
+            ${optimal.hour} (${riskDiff}% safer)</span>`;
     }
 }
 
@@ -524,40 +547,18 @@ function displayRouteCards(routes) {
 
     routes.forEach(route => {
         const card = document.createElement('div');
-        card.className = 'route-card p-3 mb-2 rounded glass-card';
+        card.className = `route-card ${selectedRouteId === route.id ? 'route-card-selected' : ''}`;
         card.dataset.routeId = route.id;
 
-        const color =
-            route.risk_level === 'low' ? '#28a745' :
-                route.risk_level === 'medium' ? '#ffc107' :
-                    '#dc3545';
-
-        const selectedBadge = route.recommended ?
-            '<span class="badge bg-success">Recommended</span>' : '';
-
-        const weatherHtml = route.weather_data ? `
-            <div class="weather-mini mt-1" style="font-size: 0.75rem; color: #aaa;">
-                <i class="fas fa-cloud-sun"></i> ${route.weather_data.weather_category} 
-                | <i class="fas fa-droplet"></i> ${route.weather_data.humidity}%
-            </div>` : '';
-
-        const trafficHtml = route.traffic_delay ? `
-            <div class="traffic-mini mt-1" style="font-size: 0.75rem; color: #ff9800;">
-                <i class="fas fa-traffic-light"></i> Traffic Delay: +${route.traffic_delay} min
-            </div>` : '';
+        const riskColorClass = route.risk_level === 'low' ? 'text-success' : (route.risk_level === 'medium' ? 'text-warning' : 'text-danger');
 
         card.innerHTML = `
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <h6 class="mb-0 text-white">${route.name}</h6>
-                ${selectedBadge}
+            <h6>${route.name} ${route.recommended ? '<small class="text-success ms-2"><i class="fas fa-check-circle"></i></small>' : ''}</h6>
+            <div class="route-meta">
+                <span><i class="fas fa-clock me-1"></i> ${route.time_minutes} min</span>
+                <span><i class="fas fa-road me-1"></i> ${route.distance_km} km</span>
+                <span class="route-risk-val ${riskColorClass}">${route.road_risk || route.risk_score}% Road Risk</span>
             </div>
-            <div class="d-flex justify-content-between text-muted small">
-                <span><i class="fas fa-road"></i> ${route.distance_km} km</span>
-                <span><i class="fas fa-clock"></i> ${route.time_minutes} min</span>
-                <span style="color:${color}; font-weight:bold;"><i class="fas fa-shield-alt"></i> Risk: ${route.risk_score}%</span>
-            </div>
-            ${weatherHtml}
-            ${trafficHtml}
         `;
 
         card.onclick = () => {
@@ -573,30 +574,49 @@ function displayRouteCards(routes) {
 
 function showRouteDetails(route) {
     const container = document.getElementById('detailsContent');
-    const color = route.risk_level === 'low' ? '#28a745' : route.risk_level === 'medium' ? '#ffc107' : '#dc3545';
-
-    const weatherInfo = route.weather_data ? `
-        <li class="list-group-item bg-transparent text-white border-secondary">
-            <i class="fas fa-cloud-sun text-warning"></i> Weather: <strong>${route.weather_data.weather_category}</strong> 
-            (Rain: ${route.weather_data.rain_mm}mm, Hum: ${route.weather_data.humidity}%)
-        </li>` : '';
-
-    const trafficInfo = route.traffic_delay ? `
-        <li class="list-group-item bg-transparent text-white border-secondary">
-            <i class="fas fa-traffic-light text-danger"></i> Traffic Delay: <strong>+${route.traffic_delay} mins</strong>
-        </li>` : '';
+    const riskColorClass = route.risk_level === 'low' ? 'text-success' : (route.risk_level === 'medium' ? 'text-warning' : 'text-danger');
 
     container.innerHTML = `
-        <div class="alert ${route.recommended ? 'alert-success' : 'alert-info'} mb-3" style="border-left: 4px solid ${color};">
-            <strong>${route.name}</strong> - Currently Selected Route
+        <div class="mb-3">
+            <h4 class="outfit-font fw-bold ${riskColorClass}">${route.road_risk || route.risk_score}% Inherent Road Risk</h4>
+            <p class="text-secondary small mb-0">${route.name} segments analysis</p>
         </div>
-        <ul class="list-group list-group-flush bg-transparent">
-            <li class="list-group-item bg-transparent text-white border-secondary"><i class="fas fa-road text-primary"></i> Distance: <strong>${route.distance_km} km</strong></li>
-            <li class="list-group-item bg-transparent text-white border-secondary"><i class="fas fa-clock text-info"></i> Time: <strong>${route.time_minutes} mins</strong></li>
-            ${trafficInfo}
-            <li class="list-group-item bg-transparent text-white border-secondary"><i class="fas fa-exclamation-triangle text-warning"></i> Risk Score: <strong style="color:${color}">${route.risk_score}% (${route.risk_level.toUpperCase()})</strong></li>
-            ${weatherInfo}
-        </ul>
+        
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="city-card p-2">
+                    <span class="stat-label" style="font-size: 0.6rem;">Est. Time</span>
+                    <div class="stat-value" style="font-size: 0.9rem;"><i class="fas fa-clock text-primary me-1"></i>${route.time_minutes}m</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="city-card p-2">
+                    <span class="stat-label" style="font-size: 0.6rem;">Distance</span>
+                    <div class="stat-value" style="font-size: 0.9rem;"><i class="fas fa-road text-info me-1"></i>${route.distance_km}km</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="city-card p-2" style="border-color: var(--accent-primary); background: rgba(59, 130, 246, 0.05);">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="stat-label" style="font-size: 0.6rem;">Vehicle Vulnerability</span>
+                        <span class="badge bg-primary" style="font-size: 0.6rem;">+${route.vehicle_vulnerability || 0}% Info</span>
+                    </div>
+                    <div class="stat-value text-primary" style="font-size: 0.9rem;">
+                        <i class="fas fa-shield-halved me-1"></i>
+                        ${route.vehicle_info?.vehicle_name || 'Vehicle'} specific factor
+                    </div>
+                </div>
+            </div>
+            ${route.weather_data ? `
+            <div class="col-12">
+                <div class="city-card p-2">
+                    <span class="stat-label" style="font-size: 0.6rem;">Atmospheric Impact</span>
+                    <div class="stat-value d-flex align-items-center gap-2" style="font-size: 0.9rem;">
+                        <span><i class="fas fa-cloud-sun text-warning me-1"></i>${route.weather_data.weather_category}</span>
+                    </div>
+                </div>
+            </div>` : ''}
+        </div>
     `;
 
     document.getElementById('routeDetails').style.display = 'block';
@@ -672,7 +692,7 @@ async function loadActiveAccidents() {
             data.accidents.forEach(acc => {
                 const color = acc.severity === 'minor' ? '#28a745' : acc.severity === 'moderate' ? '#ffc107' : '#dc3545';
 
-                // Create pulsing marker (Requires CSS injected below)
+                // Create pulsing marker
                 const icon = L.divIcon({
                     className: 'accident-marker-container',
                     html: `
@@ -689,6 +709,10 @@ async function loadActiveAccidents() {
                 marker.bindPopup(`<b>${acc.severity.toUpperCase()} Accident</b><br>${acc.description || 'Watch out for delays.'}`);
                 accidentMarkers.push(marker);
             });
+
+            // Update UI count
+            const countEl = document.getElementById('activeAccidentsCount');
+            if (countEl) countEl.textContent = data.count || data.accidents.length;
         }
     } catch (e) {
         console.error('Failed to load accidents:', e);
@@ -856,10 +880,10 @@ function showToast(type, message) {
 
     const toastEl = document.getElementById(type + 'Toast');
     if (toastEl) {
-        const toast = new bootstrap.Toast(toastEl);
-        toast.show();
-    } else {
-        alert(message);
+        toastEl.style.display = 'block';
+        setTimeout(() => {
+            toastEl.style.display = 'none';
+        }, 5000);
     }
 }
 
@@ -905,6 +929,11 @@ window.addEventListener('load', () => {
     initMap();
     loadActiveAccidents();
     loadFavorites();
+
+    // Ensure map renders correctly after layout settles
+    setTimeout(() => {
+        if (map) map.invalidateSize();
+    }, 100);
 
     // Auto-refresh accidents every 60 seconds
     setInterval(loadActiveAccidents, 60000);
