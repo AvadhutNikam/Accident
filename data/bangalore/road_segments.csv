@@ -1,100 +1,103 @@
 segment_id,road_name,start_lat,start_lon,end_lat,end_lon,risk_level,avg_traffic,speed_limit,lanes
-bangalore_Old_Madras_Road_0,Old Madras Road,12.9762,77.6033,12.978200000000001,77.6053,high,4650,40,6
-bangalore_Old_Madras_Road_1,Old Madras Road,12.978200000000001,77.6053,12.9802,77.60730000000001,high,4101,60,3
-bangalore_Old_Madras_Road_2,Old Madras Road,12.9802,77.60730000000001,12.9822,77.6093,high,3005,60,3
-bangalore_Old_Madras_Road_3,Old Madras Road,12.9822,77.6093,12.9842,77.6113,high,1060,50,3
-bangalore_Old_Madras_Road_4,Old Madras Road,12.9842,77.6113,12.9862,77.61330000000001,high,726,50,2
-bangalore_Old_Madras_Road_5,Old Madras Road,12.9862,77.61330000000001,12.9882,77.6153,high,1347,80,3
-bangalore_Old_Madras_Road_6,Old Madras Road,12.9882,77.6153,12.9902,77.6173,high,4546,50,6
-bangalore_Old_Madras_Road_7,Old Madras Road,12.9902,77.6173,12.9922,77.61930000000001,high,3494,40,4
-bangalore_Old_Madras_Road_8,Old Madras Road,12.9922,77.61930000000001,12.994200000000001,77.6213,high,1385,40,6
-bangalore_Hosur_Road_0,Hosur Road,12.8456,77.6603,12.8476,77.6623,high,4765,60,6
-bangalore_Hosur_Road_1,Hosur Road,12.8476,77.6623,12.849599999999999,77.66430000000001,high,1971,40,3
-bangalore_Hosur_Road_2,Hosur Road,12.849599999999999,77.66430000000001,12.8516,77.6663,high,2859,50,2
-bangalore_Hosur_Road_3,Hosur Road,12.8516,77.6663,12.853599999999998,77.6683,high,1047,60,2
-bangalore_Hosur_Road_4,Hosur Road,12.853599999999998,77.6683,12.855599999999999,77.67030000000001,high,4234,50,6
-bangalore_Hosur_Road_5,Hosur Road,12.855599999999999,77.67030000000001,12.8576,77.6723,high,1226,50,4
-bangalore_Hosur_Road_6,Hosur Road,12.8576,77.6723,12.859599999999999,77.6743,high,1296,50,6
-bangalore_Hosur_Road_7,Hosur Road,12.859599999999999,77.6743,12.8616,77.67630000000001,high,2972,40,6
-bangalore_Hosur_Road_8,Hosur Road,12.8616,77.67630000000001,12.8636,77.67830000000001,high,4573,80,6
-bangalore_Hosur_Road_9,Hosur Road,12.8636,77.67830000000001,12.865599999999999,77.6803,high,4577,60,2
-bangalore_Hosur_Road_10,Hosur Road,12.865599999999999,77.6803,12.8676,77.68230000000001,high,769,80,6
-bangalore_Hosur_Road_11,Hosur Road,12.8676,77.68230000000001,12.869599999999998,77.68430000000001,high,938,60,2
-bangalore_Outer_Ring_Road_0,Outer Ring Road,12.9121,77.6446,12.914100000000001,77.64659999999999,high,1823,50,6
-bangalore_Outer_Ring_Road_1,Outer Ring Road,12.914100000000001,77.64659999999999,12.9161,77.6486,high,545,40,4
-bangalore_Outer_Ring_Road_2,Outer Ring Road,12.9161,77.6486,12.9181,77.6506,high,1538,60,2
-bangalore_Outer_Ring_Road_3,Outer Ring Road,12.9181,77.6506,12.9201,77.65259999999999,high,710,60,2
-bangalore_Outer_Ring_Road_4,Outer Ring Road,12.9201,77.65259999999999,12.9221,77.6546,high,3050,40,2
-bangalore_Outer_Ring_Road_5,Outer Ring Road,12.9221,77.6546,12.924100000000001,77.6566,high,3104,40,3
-bangalore_Outer_Ring_Road_6,Outer Ring Road,12.924100000000001,77.6566,12.9261,77.65859999999999,high,982,60,6
-bangalore_Outer_Ring_Road_7,Outer Ring Road,12.9261,77.65859999999999,12.9281,77.6606,high,1886,50,4
-bangalore_Outer_Ring_Road_8,Outer Ring Road,12.9281,77.6606,12.930100000000001,77.6626,high,930,60,3
-bangalore_Outer_Ring_Road_9,Outer Ring Road,12.930100000000001,77.6626,12.9321,77.6646,high,4638,40,4
-bangalore_Sarjapur_Road_0,Sarjapur Road,12.9165,77.6101,12.9185,77.6121,medium,1754,50,4
-bangalore_Sarjapur_Road_1,Sarjapur Road,12.9185,77.6121,12.920499999999999,77.61410000000001,medium,4737,60,3
-bangalore_Sarjapur_Road_2,Sarjapur Road,12.920499999999999,77.61410000000001,12.9225,77.6161,medium,4463,40,2
-bangalore_Sarjapur_Road_3,Sarjapur Road,12.9225,77.6161,12.924499999999998,77.6181,medium,4678,40,2
-bangalore_Sarjapur_Road_4,Sarjapur Road,12.924499999999998,77.6181,12.926499999999999,77.62010000000001,medium,2606,50,4
-bangalore_Sarjapur_Road_5,Sarjapur Road,12.926499999999999,77.62010000000001,12.9285,77.6221,medium,3089,80,3
-bangalore_Sarjapur_Road_6,Sarjapur Road,12.9285,77.6221,12.930499999999999,77.6241,medium,1914,60,4
-bangalore_Sarjapur_Road_7,Sarjapur Road,12.930499999999999,77.6241,12.9325,77.62610000000001,medium,1642,80,2
-bangalore_Sarjapur_Road_8,Sarjapur Road,12.9325,77.62610000000001,12.9345,77.6281,medium,2545,50,2
-bangalore_Sarjapur_Road_9,Sarjapur Road,12.9345,77.6281,12.936499999999999,77.6301,medium,2333,80,4
-bangalore_Sarjapur_Road_10,Sarjapur Road,12.936499999999999,77.6301,12.9385,77.63210000000001,medium,4788,80,6
-bangalore_Sarjapur_Road_11,Sarjapur Road,12.9385,77.63210000000001,12.940499999999998,77.6341,medium,4998,50,6
-bangalore_Bannerghatta_Road_0,Bannerghatta Road,12.925,77.5937,12.927000000000001,77.5957,medium,3122,80,6
-bangalore_Bannerghatta_Road_1,Bannerghatta Road,12.927000000000001,77.5957,12.929,77.5977,medium,898,60,3
-bangalore_Bannerghatta_Road_2,Bannerghatta Road,12.929,77.5977,12.931000000000001,77.5997,medium,4219,50,2
-bangalore_Bannerghatta_Road_3,Bannerghatta Road,12.931000000000001,77.5997,12.933,77.6017,medium,3801,50,3
-bangalore_Bannerghatta_Road_4,Bannerghatta Road,12.933,77.6017,12.935,77.6037,medium,3640,60,4
-bangalore_Bannerghatta_Road_5,Bannerghatta Road,12.935,77.6037,12.937000000000001,77.6057,medium,2657,60,2
-bangalore_Bannerghatta_Road_6,Bannerghatta Road,12.937000000000001,77.6057,12.939,77.6077,medium,2061,60,4
-bangalore_Bannerghatta_Road_7,Bannerghatta Road,12.939,77.6077,12.941,77.6097,medium,1778,40,6
-bangalore_Bannerghatta_Road_8,Bannerghatta Road,12.941,77.6097,12.943000000000001,77.6117,medium,3232,80,4
-bangalore_Airport_Road_0,Airport Road,13.1007,77.5963,13.1027,77.5983,medium,4856,50,6
-bangalore_Airport_Road_1,Airport Road,13.1027,77.5983,13.1047,77.6003,medium,4503,60,3
-bangalore_Airport_Road_2,Airport Road,13.1047,77.6003,13.1067,77.6023,medium,1104,60,3
-bangalore_Airport_Road_3,Airport Road,13.1067,77.6023,13.108699999999999,77.6043,medium,1400,60,2
-bangalore_Airport_Road_4,Airport Road,13.108699999999999,77.6043,13.1107,77.6063,medium,3883,50,3
-bangalore_Airport_Road_5,Airport Road,13.1107,77.6063,13.1127,77.6083,medium,1893,40,6
-bangalore_Airport_Road_6,Airport Road,13.1127,77.6083,13.1147,77.6103,medium,4865,50,6
-bangalore_Airport_Road_7,Airport Road,13.1147,77.6103,13.1167,77.6123,medium,713,40,2
-bangalore_Whitefield_Main_Road_0,Whitefield Main Road,12.9698,77.7499,12.9718,77.75189999999999,high,3709,50,6
-bangalore_Whitefield_Main_Road_1,Whitefield Main Road,12.9718,77.75189999999999,12.973799999999999,77.7539,high,4333,40,2
-bangalore_Whitefield_Main_Road_2,Whitefield Main Road,12.973799999999999,77.7539,12.9758,77.7559,high,2535,60,3
-bangalore_Whitefield_Main_Road_3,Whitefield Main Road,12.9758,77.7559,12.977799999999998,77.75789999999999,high,1965,80,2
-bangalore_Whitefield_Main_Road_4,Whitefield Main Road,12.977799999999998,77.75789999999999,12.9798,77.7599,high,3910,60,4
-bangalore_Whitefield_Main_Road_5,Whitefield Main Road,12.9798,77.7599,12.9818,77.7619,high,1760,40,4
-bangalore_Whitefield_Main_Road_6,Whitefield Main Road,12.9818,77.7619,12.983799999999999,77.76389999999999,high,4441,80,4
-bangalore_Whitefield_Main_Road_7,Whitefield Main Road,12.983799999999999,77.76389999999999,12.9858,77.7659,high,779,60,4
-bangalore_Whitefield_Main_Road_8,Whitefield Main Road,12.9858,77.7659,12.9878,77.7679,high,1158,80,4
-bangalore_Whitefield_Main_Road_9,Whitefield Main Road,12.9878,77.7679,12.989799999999999,77.76989999999999,high,2036,80,4
-bangalore_Koramangala_80ft_Road_0,Koramangala 80ft Road,12.9352,77.6245,12.9372,77.6265,low,3707,60,2
-bangalore_Koramangala_80ft_Road_1,Koramangala 80ft Road,12.9372,77.6265,12.9392,77.6285,low,3967,50,6
-bangalore_Koramangala_80ft_Road_2,Koramangala 80ft Road,12.9392,77.6285,12.9412,77.6305,low,2813,50,6
-bangalore_Koramangala_80ft_Road_3,Koramangala 80ft Road,12.9412,77.6305,12.9432,77.6325,low,2309,80,2
-bangalore_Koramangala_80ft_Road_4,Koramangala 80ft Road,12.9432,77.6325,12.9452,77.6345,low,4390,80,3
-bangalore_Koramangala_80ft_Road_5,Koramangala 80ft Road,12.9452,77.6345,12.9472,77.6365,low,2418,40,6
-bangalore_Koramangala_80ft_Road_6,Koramangala 80ft Road,12.9472,77.6365,12.9492,77.6385,low,3054,60,2
-bangalore_Koramangala_80ft_Road_7,Koramangala 80ft Road,12.9492,77.6385,12.9512,77.6405,low,1119,60,2
-bangalore_Koramangala_80ft_Road_8,Koramangala 80ft Road,12.9512,77.6405,12.9532,77.6425,low,3496,40,4
-bangalore_Koramangala_80ft_Road_9,Koramangala 80ft Road,12.9532,77.6425,12.9552,77.6445,low,1647,60,2
-bangalore_Koramangala_80ft_Road_10,Koramangala 80ft Road,12.9552,77.6445,12.9572,77.6465,low,1096,60,3
-bangalore_Indiranagar_100ft_Road_0,Indiranagar 100ft Road,12.9784,77.6408,12.980400000000001,77.6428,low,2383,60,3
-bangalore_Indiranagar_100ft_Road_1,Indiranagar 100ft Road,12.980400000000001,77.6428,12.9824,77.6448,low,4025,40,4
-bangalore_Indiranagar_100ft_Road_2,Indiranagar 100ft Road,12.9824,77.6448,12.9844,77.6468,low,3436,80,6
-bangalore_Indiranagar_100ft_Road_3,Indiranagar 100ft Road,12.9844,77.6468,12.9864,77.6488,low,1680,40,3
-bangalore_Indiranagar_100ft_Road_4,Indiranagar 100ft Road,12.9864,77.6488,12.9884,77.6508,low,1377,50,6
-bangalore_Indiranagar_100ft_Road_5,Indiranagar 100ft Road,12.9884,77.6508,12.990400000000001,77.6528,low,4881,40,2
-bangalore_Indiranagar_100ft_Road_6,Indiranagar 100ft Road,12.990400000000001,77.6528,12.9924,77.6548,low,2063,50,6
-bangalore_Indiranagar_100ft_Road_7,Indiranagar 100ft Road,12.9924,77.6548,12.9944,77.6568,low,2731,50,4
-bangalore_Indiranagar_100ft_Road_8,Indiranagar 100ft Road,12.9944,77.6568,12.996400000000001,77.6588,low,4622,80,3
-bangalore_Indiranagar_100ft_Road_9,Indiranagar 100ft Road,12.996400000000001,77.6588,12.9984,77.6608,low,4965,60,3
-bangalore_Marathahalli_Bridge_Road_0,Marathahalli Bridge Road,12.9591,77.7012,12.9611,77.7032,high,1561,40,4
-bangalore_Marathahalli_Bridge_Road_1,Marathahalli Bridge Road,12.9611,77.7032,12.963099999999999,77.7052,high,4757,50,3
-bangalore_Marathahalli_Bridge_Road_2,Marathahalli Bridge Road,12.963099999999999,77.7052,12.9651,77.7072,high,2427,50,6
-bangalore_Marathahalli_Bridge_Road_3,Marathahalli Bridge Road,12.9651,77.7072,12.967099999999999,77.7092,high,3341,40,6
-bangalore_Marathahalli_Bridge_Road_4,Marathahalli Bridge Road,12.967099999999999,77.7092,12.9691,77.7112,high,715,80,3
-bangalore_Marathahalli_Bridge_Road_5,Marathahalli Bridge Road,12.9691,77.7112,12.9711,77.7132,high,4786,50,6
-bangalore_Marathahalli_Bridge_Road_6,Marathahalli Bridge Road,12.9711,77.7132,12.973099999999999,77.7152,high,2866,60,3
-bangalore_Marathahalli_Bridge_Road_7,Marathahalli Bridge Road,12.973099999999999,77.7152,12.9751,77.7172,high,4130,50,3
+bangalore_Old_Madras_Road_0,Old Madras Road,12.9762,77.6033,12.978200000000001,77.6053,high,4337,40,3
+bangalore_Old_Madras_Road_1,Old Madras Road,12.978200000000001,77.6053,12.9802,77.60730000000001,high,2492,50,3
+bangalore_Old_Madras_Road_2,Old Madras Road,12.9802,77.60730000000001,12.9822,77.6093,high,4673,80,3
+bangalore_Old_Madras_Road_3,Old Madras Road,12.9822,77.6093,12.9842,77.6113,high,4228,40,3
+bangalore_Old_Madras_Road_4,Old Madras Road,12.9842,77.6113,12.9862,77.61330000000001,high,3587,40,2
+bangalore_Old_Madras_Road_5,Old Madras Road,12.9862,77.61330000000001,12.9882,77.6153,high,3146,50,3
+bangalore_Old_Madras_Road_6,Old Madras Road,12.9882,77.6153,12.9902,77.6173,high,2375,50,2
+bangalore_Old_Madras_Road_7,Old Madras Road,12.9902,77.6173,12.9922,77.61930000000001,high,922,50,4
+bangalore_Old_Madras_Road_8,Old Madras Road,12.9922,77.61930000000001,12.994200000000001,77.6213,high,4207,40,4
+bangalore_Hosur_Road_0,Hosur Road,12.8456,77.6603,12.8476,77.6623,high,1856,50,3
+bangalore_Hosur_Road_1,Hosur Road,12.8476,77.6623,12.849599999999999,77.66430000000001,high,1101,50,3
+bangalore_Hosur_Road_2,Hosur Road,12.849599999999999,77.66430000000001,12.8516,77.6663,high,1035,50,6
+bangalore_Hosur_Road_3,Hosur Road,12.8516,77.6663,12.853599999999998,77.6683,high,918,80,4
+bangalore_Hosur_Road_4,Hosur Road,12.853599999999998,77.6683,12.855599999999999,77.67030000000001,high,1021,50,3
+bangalore_Hosur_Road_5,Hosur Road,12.855599999999999,77.67030000000001,12.8576,77.6723,high,3669,80,2
+bangalore_Hosur_Road_6,Hosur Road,12.8576,77.6723,12.859599999999999,77.6743,high,3477,60,6
+bangalore_Hosur_Road_7,Hosur Road,12.859599999999999,77.6743,12.8616,77.67630000000001,high,2777,60,3
+bangalore_Hosur_Road_8,Hosur Road,12.8616,77.67630000000001,12.8636,77.67830000000001,high,4566,80,6
+bangalore_Hosur_Road_9,Hosur Road,12.8636,77.67830000000001,12.865599999999999,77.6803,high,1458,60,6
+bangalore_Hosur_Road_10,Hosur Road,12.865599999999999,77.6803,12.8676,77.68230000000001,high,4060,50,3
+bangalore_Hosur_Road_11,Hosur Road,12.8676,77.68230000000001,12.869599999999998,77.68430000000001,high,4804,60,6
+bangalore_Outer_Ring_Road_0,Outer Ring Road,12.9121,77.6446,12.914100000000001,77.64659999999999,high,991,80,4
+bangalore_Outer_Ring_Road_1,Outer Ring Road,12.914100000000001,77.64659999999999,12.9161,77.6486,high,3459,50,2
+bangalore_Outer_Ring_Road_2,Outer Ring Road,12.9161,77.6486,12.9181,77.6506,high,3350,50,3
+bangalore_Outer_Ring_Road_3,Outer Ring Road,12.9181,77.6506,12.9201,77.65259999999999,high,3799,50,4
+bangalore_Outer_Ring_Road_4,Outer Ring Road,12.9201,77.65259999999999,12.9221,77.6546,high,3131,50,3
+bangalore_Outer_Ring_Road_5,Outer Ring Road,12.9221,77.6546,12.924100000000001,77.6566,high,1242,80,6
+bangalore_Outer_Ring_Road_6,Outer Ring Road,12.924100000000001,77.6566,12.9261,77.65859999999999,high,3475,60,2
+bangalore_Outer_Ring_Road_7,Outer Ring Road,12.9261,77.65859999999999,12.9281,77.6606,high,1329,40,2
+bangalore_Sarjapur_Road_0,Sarjapur Road,12.9165,77.6101,12.9185,77.6121,medium,2414,80,4
+bangalore_Sarjapur_Road_1,Sarjapur Road,12.9185,77.6121,12.920499999999999,77.61410000000001,medium,1726,80,4
+bangalore_Sarjapur_Road_2,Sarjapur Road,12.920499999999999,77.61410000000001,12.9225,77.6161,medium,4314,80,2
+bangalore_Sarjapur_Road_3,Sarjapur Road,12.9225,77.6161,12.924499999999998,77.6181,medium,4398,60,2
+bangalore_Sarjapur_Road_4,Sarjapur Road,12.924499999999998,77.6181,12.926499999999999,77.62010000000001,medium,646,50,6
+bangalore_Sarjapur_Road_5,Sarjapur Road,12.926499999999999,77.62010000000001,12.9285,77.6221,medium,2499,60,2
+bangalore_Sarjapur_Road_6,Sarjapur Road,12.9285,77.6221,12.930499999999999,77.6241,medium,2488,40,6
+bangalore_Sarjapur_Road_7,Sarjapur Road,12.930499999999999,77.6241,12.9325,77.62610000000001,medium,3205,40,6
+bangalore_Sarjapur_Road_8,Sarjapur Road,12.9325,77.62610000000001,12.9345,77.6281,medium,4410,60,6
+bangalore_Sarjapur_Road_9,Sarjapur Road,12.9345,77.6281,12.936499999999999,77.6301,medium,3142,60,2
+bangalore_Sarjapur_Road_10,Sarjapur Road,12.936499999999999,77.6301,12.9385,77.63210000000001,medium,1684,80,4
+bangalore_Sarjapur_Road_11,Sarjapur Road,12.9385,77.63210000000001,12.940499999999998,77.6341,medium,2189,40,3
+bangalore_Bannerghatta_Road_0,Bannerghatta Road,12.925,77.5937,12.927000000000001,77.5957,medium,3685,40,4
+bangalore_Bannerghatta_Road_1,Bannerghatta Road,12.927000000000001,77.5957,12.929,77.5977,medium,4650,50,4
+bangalore_Bannerghatta_Road_2,Bannerghatta Road,12.929,77.5977,12.931000000000001,77.5997,medium,1146,40,4
+bangalore_Bannerghatta_Road_3,Bannerghatta Road,12.931000000000001,77.5997,12.933,77.6017,medium,4277,40,2
+bangalore_Bannerghatta_Road_4,Bannerghatta Road,12.933,77.6017,12.935,77.6037,medium,4867,60,3
+bangalore_Bannerghatta_Road_5,Bannerghatta Road,12.935,77.6037,12.937000000000001,77.6057,medium,1254,50,6
+bangalore_Bannerghatta_Road_6,Bannerghatta Road,12.937000000000001,77.6057,12.939,77.6077,medium,1342,60,2
+bangalore_Bannerghatta_Road_7,Bannerghatta Road,12.939,77.6077,12.941,77.6097,medium,3069,80,3
+bangalore_Bannerghatta_Road_8,Bannerghatta Road,12.941,77.6097,12.943000000000001,77.6117,medium,4849,40,4
+bangalore_Bannerghatta_Road_9,Bannerghatta Road,12.943000000000001,77.6117,12.945,77.6137,medium,3380,40,2
+bangalore_Airport_Road_0,Airport Road,13.1007,77.5963,13.1027,77.5983,medium,3492,60,2
+bangalore_Airport_Road_1,Airport Road,13.1027,77.5983,13.1047,77.6003,medium,1696,60,2
+bangalore_Airport_Road_2,Airport Road,13.1047,77.6003,13.1067,77.6023,medium,2698,60,4
+bangalore_Airport_Road_3,Airport Road,13.1067,77.6023,13.108699999999999,77.6043,medium,3050,40,2
+bangalore_Airport_Road_4,Airport Road,13.108699999999999,77.6043,13.1107,77.6063,medium,4240,50,4
+bangalore_Airport_Road_5,Airport Road,13.1107,77.6063,13.1127,77.6083,medium,2795,60,4
+bangalore_Airport_Road_6,Airport Road,13.1127,77.6083,13.1147,77.6103,medium,1042,50,3
+bangalore_Airport_Road_7,Airport Road,13.1147,77.6103,13.1167,77.6123,medium,3505,50,3
+bangalore_Airport_Road_8,Airport Road,13.1167,77.6123,13.1187,77.6143,medium,2987,80,2
+bangalore_Airport_Road_9,Airport Road,13.1187,77.6143,13.1207,77.6163,medium,1678,80,4
+bangalore_Airport_Road_10,Airport Road,13.1207,77.6163,13.1227,77.6183,medium,2725,50,4
+bangalore_Airport_Road_11,Airport Road,13.1227,77.6183,13.124699999999999,77.6203,medium,942,80,3
+bangalore_Whitefield_Main_Road_0,Whitefield Main Road,12.9698,77.7499,12.9718,77.75189999999999,high,4523,80,3
+bangalore_Whitefield_Main_Road_1,Whitefield Main Road,12.9718,77.75189999999999,12.973799999999999,77.7539,high,1153,50,4
+bangalore_Whitefield_Main_Road_2,Whitefield Main Road,12.973799999999999,77.7539,12.9758,77.7559,high,1845,80,6
+bangalore_Whitefield_Main_Road_3,Whitefield Main Road,12.9758,77.7559,12.977799999999998,77.75789999999999,high,954,50,2
+bangalore_Whitefield_Main_Road_4,Whitefield Main Road,12.977799999999998,77.75789999999999,12.9798,77.7599,high,2249,60,2
+bangalore_Whitefield_Main_Road_5,Whitefield Main Road,12.9798,77.7599,12.9818,77.7619,high,1271,50,2
+bangalore_Whitefield_Main_Road_6,Whitefield Main Road,12.9818,77.7619,12.983799999999999,77.76389999999999,high,3315,40,3
+bangalore_Whitefield_Main_Road_7,Whitefield Main Road,12.983799999999999,77.76389999999999,12.9858,77.7659,high,4535,40,6
+bangalore_Koramangala_80ft_Road_0,Koramangala 80ft Road,12.9352,77.6245,12.9372,77.6265,low,4804,80,6
+bangalore_Koramangala_80ft_Road_1,Koramangala 80ft Road,12.9372,77.6265,12.9392,77.6285,low,2662,60,4
+bangalore_Koramangala_80ft_Road_2,Koramangala 80ft Road,12.9392,77.6285,12.9412,77.6305,low,1928,50,4
+bangalore_Koramangala_80ft_Road_3,Koramangala 80ft Road,12.9412,77.6305,12.9432,77.6325,low,4668,50,3
+bangalore_Koramangala_80ft_Road_4,Koramangala 80ft Road,12.9432,77.6325,12.9452,77.6345,low,2150,60,3
+bangalore_Koramangala_80ft_Road_5,Koramangala 80ft Road,12.9452,77.6345,12.9472,77.6365,low,3014,60,2
+bangalore_Koramangala_80ft_Road_6,Koramangala 80ft Road,12.9472,77.6365,12.9492,77.6385,low,1823,80,2
+bangalore_Koramangala_80ft_Road_7,Koramangala 80ft Road,12.9492,77.6385,12.9512,77.6405,low,4031,40,2
+bangalore_Koramangala_80ft_Road_8,Koramangala 80ft Road,12.9512,77.6405,12.9532,77.6425,low,4376,60,6
+bangalore_Koramangala_80ft_Road_9,Koramangala 80ft Road,12.9532,77.6425,12.9552,77.6445,low,2169,80,6
+bangalore_Indiranagar_100ft_Road_0,Indiranagar 100ft Road,12.9784,77.6408,12.980400000000001,77.6428,low,4635,80,3
+bangalore_Indiranagar_100ft_Road_1,Indiranagar 100ft Road,12.980400000000001,77.6428,12.9824,77.6448,low,4105,60,4
+bangalore_Indiranagar_100ft_Road_2,Indiranagar 100ft Road,12.9824,77.6448,12.9844,77.6468,low,805,60,4
+bangalore_Indiranagar_100ft_Road_3,Indiranagar 100ft Road,12.9844,77.6468,12.9864,77.6488,low,1201,60,2
+bangalore_Indiranagar_100ft_Road_4,Indiranagar 100ft Road,12.9864,77.6488,12.9884,77.6508,low,1800,60,4
+bangalore_Indiranagar_100ft_Road_5,Indiranagar 100ft Road,12.9884,77.6508,12.990400000000001,77.6528,low,3157,40,3
+bangalore_Indiranagar_100ft_Road_6,Indiranagar 100ft Road,12.990400000000001,77.6528,12.9924,77.6548,low,2951,50,2
+bangalore_Indiranagar_100ft_Road_7,Indiranagar 100ft Road,12.9924,77.6548,12.9944,77.6568,low,2543,80,4
+bangalore_Indiranagar_100ft_Road_8,Indiranagar 100ft Road,12.9944,77.6568,12.996400000000001,77.6588,low,2705,40,6
+bangalore_Indiranagar_100ft_Road_9,Indiranagar 100ft Road,12.996400000000001,77.6588,12.9984,77.6608,low,3311,80,2
+bangalore_Indiranagar_100ft_Road_10,Indiranagar 100ft Road,12.9984,77.6608,13.0004,77.6628,low,1971,80,2
+bangalore_Marathahalli_Bridge_Road_0,Marathahalli Bridge Road,12.9591,77.7012,12.9611,77.7032,high,3171,40,4
+bangalore_Marathahalli_Bridge_Road_1,Marathahalli Bridge Road,12.9611,77.7032,12.963099999999999,77.7052,high,1308,40,4
+bangalore_Marathahalli_Bridge_Road_2,Marathahalli Bridge Road,12.963099999999999,77.7052,12.9651,77.7072,high,1987,50,6
+bangalore_Marathahalli_Bridge_Road_3,Marathahalli Bridge Road,12.9651,77.7072,12.967099999999999,77.7092,high,3213,40,2
+bangalore_Marathahalli_Bridge_Road_4,Marathahalli Bridge Road,12.967099999999999,77.7092,12.9691,77.7112,high,3299,80,3
+bangalore_Marathahalli_Bridge_Road_5,Marathahalli Bridge Road,12.9691,77.7112,12.9711,77.7132,high,1041,40,2
+bangalore_Marathahalli_Bridge_Road_6,Marathahalli Bridge Road,12.9711,77.7132,12.973099999999999,77.7152,high,4246,40,3
+bangalore_Marathahalli_Bridge_Road_7,Marathahalli Bridge Road,12.973099999999999,77.7152,12.9751,77.7172,high,1525,40,2
+bangalore_Marathahalli_Bridge_Road_8,Marathahalli Bridge Road,12.9751,77.7172,12.9771,77.7192,high,3673,50,4
+bangalore_Marathahalli_Bridge_Road_9,Marathahalli Bridge Road,12.9771,77.7192,12.979099999999999,77.7212,high,2904,80,6

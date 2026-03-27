@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
-from xgboost import XGBRegressor
+from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split, KFold, cross_val_score
 from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import mean_absolute_error, r2_score
+from sklearn.metrics import accuracy_score
 import pickle, math, random, os, argparse
 from collections import defaultdict
 
@@ -96,25 +96,34 @@ def train_city_model(city_id):
     feature_columns = ["hour", "day_of_week", "month", "is_rush_hour", "is_night", "is_weekend",
                       "weather_severity_score", "rain_mm", "humidity", "road_risk_encoded", "vehicle_encoded"]
 
-    X = df[feature_columns]; y = df["risk_score"]
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X = df[feature_columns]
+    y_class = df["severity"].map({"Minor": 0, "Moderate": 1, "Severe": 1, "Fatal": 2}).fillna(0).astype(int)
+    
+    X_train, X_test, y_train, y_test = train_test_split(X, y_class, test_size=0.2, random_state=42)
 
-    model = XGBRegressor(n_estimators=500, max_depth=6, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8, n_jobs=-1, random_state=42, objective='reg:squarederror')
+    # Inject dummy rows so XGBClassifier ALWAYS outputs a shape-3 proba array for app.py
+    if len(y_train.unique()) < 3:
+        dummy_X = X_train.iloc[:3].copy()
+        dummy_y = pd.Series([0, 1, 2], index=dummy_X.index)
+        X_train = pd.concat([X_train, dummy_X])
+        y_train = pd.concat([y_train, dummy_y])
+
+    model = XGBClassifier(n_estimators=500, max_depth=6, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8, n_jobs=-1, random_state=42)
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
-    print(f"✅ Test MAE: {mean_absolute_error(y_test, y_pred):.2f}")
+    print(f"+ Test Accuracy: {accuracy_score(y_test, y_pred):.2f}")
     
     model_data = {
         "model": model, "le_road": le_road, "le_vehicle": le_vehicle, "feature_columns": feature_columns,
-        "risk_map": risk_map, "model_type": "regressor", "weather_severity_score": WEATHER_RISK_SCORE,
+        "risk_map": risk_map, "model_type": "classifier", "weather_severity_score": WEATHER_RISK_SCORE,
         "weather_rain_mm": WEATHER_RAIN_MM, "weather_humidity": WEATHER_HUMIDITY
     }
     with open(f"{model_dir}/risk_model.pkl", "wb") as f: pickle.dump(model_data, f)
     
     risk_scores = calculate_road_risk_scores(accidents_df, segments_df)
     with open(f"{model_dir}/segment_risk_scores.pkl", "wb") as f: pickle.dump(risk_scores, f)
-    print(f"✅ Model & Risk Scores saved for {city_id}")
+    print(f"+ Model & Risk Scores saved for {city_id}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -122,7 +131,7 @@ if __name__ == "__main__":
     parser.add_argument('--all', action='store_true')
     args = parser.parse_args()
     
-    cities = ['mumbai', 'pune', 'delhi', 'bangalore']
+    cities = ['mumbai', 'pune', 'delhi', 'bangalore', 'chennai', 'kolkata', 'hyderabad', 'chandigarh']
     cities_to_train = [args.city] if args.city else (cities if args.all else [])
     
     if not cities_to_train:

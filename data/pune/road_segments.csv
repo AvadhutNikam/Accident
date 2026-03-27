@@ -1,105 +1,97 @@
 segment_id,road_name,start_lat,start_lon,end_lat,end_lon,risk_level,avg_traffic,speed_limit,lanes
-pune_Shivajinagar_Road_0,Shivajinagar Road,18.5304,73.8467,18.5324,73.8487,medium,1737,60,2
-pune_Shivajinagar_Road_1,Shivajinagar Road,18.5324,73.8487,18.5344,73.8507,medium,2088,40,3
-pune_Shivajinagar_Road_2,Shivajinagar Road,18.5344,73.8507,18.5364,73.8527,medium,3660,40,3
-pune_Shivajinagar_Road_3,Shivajinagar Road,18.5364,73.8527,18.5384,73.8547,medium,1478,50,4
-pune_Shivajinagar_Road_4,Shivajinagar Road,18.5384,73.8547,18.5404,73.8567,medium,2309,40,2
-pune_Shivajinagar_Road_5,Shivajinagar Road,18.5404,73.8567,18.5424,73.8587,medium,1617,80,2
-pune_Shivajinagar_Road_6,Shivajinagar Road,18.5424,73.8587,18.5444,73.8607,medium,2182,50,4
-pune_Shivajinagar_Road_7,Shivajinagar Road,18.5444,73.8607,18.5464,73.8627,medium,3215,50,2
-pune_Shivajinagar_Road_8,Shivajinagar Road,18.5464,73.8627,18.5484,73.8647,medium,4538,50,4
-pune_Shivajinagar_Road_9,Shivajinagar Road,18.5484,73.8647,18.5504,73.8667,medium,4197,50,3
-pune_Shivajinagar_Road_10,Shivajinagar Road,18.5504,73.8667,18.5524,73.8687,medium,3091,50,4
-pune_Shivajinagar_Road_11,Shivajinagar Road,18.5524,73.8687,18.5544,73.8707,medium,3206,50,2
-pune_Koregaon_Park_Road_0,Koregaon Park Road,18.5362,73.8958,18.5382,73.89779999999999,low,3402,60,6
-pune_Koregaon_Park_Road_1,Koregaon Park Road,18.5382,73.89779999999999,18.540200000000002,73.8998,low,2465,40,2
-pune_Koregaon_Park_Road_2,Koregaon Park Road,18.540200000000002,73.8998,18.5422,73.9018,low,3158,40,3
-pune_Koregaon_Park_Road_3,Koregaon Park Road,18.5422,73.9018,18.5442,73.90379999999999,low,874,80,4
-pune_Koregaon_Park_Road_4,Koregaon Park Road,18.5442,73.90379999999999,18.546200000000002,73.9058,low,1437,80,6
-pune_Koregaon_Park_Road_5,Koregaon Park Road,18.546200000000002,73.9058,18.5482,73.9078,low,689,50,6
-pune_Koregaon_Park_Road_6,Koregaon Park Road,18.5482,73.9078,18.5502,73.90979999999999,low,1500,60,3
-pune_Koregaon_Park_Road_7,Koregaon Park Road,18.5502,73.90979999999999,18.5522,73.9118,low,2180,50,6
-pune_Viman_Nagar_Road_0,Viman Nagar Road,18.5679,73.9143,18.5699,73.91629999999999,medium,3447,40,6
-pune_Viman_Nagar_Road_1,Viman Nagar Road,18.5699,73.91629999999999,18.571900000000003,73.9183,medium,4255,60,4
-pune_Viman_Nagar_Road_2,Viman Nagar Road,18.571900000000003,73.9183,18.573900000000002,73.9203,medium,4310,50,4
-pune_Viman_Nagar_Road_3,Viman Nagar Road,18.573900000000002,73.9203,18.5759,73.92229999999999,medium,1948,80,2
-pune_Viman_Nagar_Road_4,Viman Nagar Road,18.5759,73.92229999999999,18.577900000000003,73.9243,medium,2140,50,4
-pune_Viman_Nagar_Road_5,Viman Nagar Road,18.577900000000003,73.9243,18.579900000000002,73.9263,medium,4649,50,4
-pune_Viman_Nagar_Road_6,Viman Nagar Road,18.579900000000002,73.9263,18.5819,73.9283,medium,850,80,6
-pune_Viman_Nagar_Road_7,Viman Nagar Road,18.5819,73.9283,18.5839,73.9303,medium,4282,60,4
-pune_Viman_Nagar_Road_8,Viman Nagar Road,18.5839,73.9303,18.585900000000002,73.9323,medium,981,40,4
-pune_Viman_Nagar_Road_9,Viman Nagar Road,18.585900000000002,73.9323,18.5879,73.9343,medium,3209,40,4
-pune_Viman_Nagar_Road_10,Viman Nagar Road,18.5879,73.9343,18.5899,73.9363,medium,3673,50,3
-pune_Viman_Nagar_Road_11,Viman Nagar Road,18.5899,73.9363,18.591900000000003,73.9383,medium,4699,50,6
-pune_Hinjewadi_IT_Park_Road_0,Hinjewadi IT Park Road,18.5912,73.7389,18.5932,73.7409,high,4079,80,3
-pune_Hinjewadi_IT_Park_Road_1,Hinjewadi IT Park Road,18.5932,73.7409,18.595200000000002,73.7429,high,1737,50,3
-pune_Hinjewadi_IT_Park_Road_2,Hinjewadi IT Park Road,18.595200000000002,73.7429,18.5972,73.7449,high,3142,40,4
-pune_Hinjewadi_IT_Park_Road_3,Hinjewadi IT Park Road,18.5972,73.7449,18.5992,73.7469,high,1049,60,3
-pune_Hinjewadi_IT_Park_Road_4,Hinjewadi IT Park Road,18.5992,73.7469,18.601200000000002,73.7489,high,3986,50,4
-pune_Hinjewadi_IT_Park_Road_5,Hinjewadi IT Park Road,18.601200000000002,73.7489,18.6032,73.7509,high,527,80,3
-pune_Hinjewadi_IT_Park_Road_6,Hinjewadi IT Park Road,18.6032,73.7509,18.6052,73.7529,high,1133,60,2
-pune_Hinjewadi_IT_Park_Road_7,Hinjewadi IT Park Road,18.6052,73.7529,18.6072,73.7549,high,4379,40,4
-pune_Hinjewadi_IT_Park_Road_8,Hinjewadi IT Park Road,18.6072,73.7549,18.6092,73.7569,high,1728,50,4
-pune_Hinjewadi_IT_Park_Road_9,Hinjewadi IT Park Road,18.6092,73.7569,18.6112,73.7589,high,3758,80,6
-pune_Kothrud_Road_0,Kothrud Road,18.5074,73.8077,18.5094,73.80969999999999,medium,1787,80,6
-pune_Kothrud_Road_1,Kothrud Road,18.5094,73.80969999999999,18.511400000000002,73.8117,medium,4934,80,3
-pune_Kothrud_Road_2,Kothrud Road,18.511400000000002,73.8117,18.5134,73.8137,medium,1477,40,3
-pune_Kothrud_Road_3,Kothrud Road,18.5134,73.8137,18.5154,73.81569999999999,medium,3078,80,6
-pune_Kothrud_Road_4,Kothrud Road,18.5154,73.81569999999999,18.517400000000002,73.8177,medium,3900,40,2
-pune_Kothrud_Road_5,Kothrud Road,18.517400000000002,73.8177,18.5194,73.8197,medium,3776,50,2
-pune_Kothrud_Road_6,Kothrud Road,18.5194,73.8197,18.5214,73.82169999999999,medium,4833,50,6
-pune_Kothrud_Road_7,Kothrud Road,18.5214,73.82169999999999,18.5234,73.8237,medium,2976,40,3
-pune_Kothrud_Road_8,Kothrud Road,18.5234,73.8237,18.5254,73.8257,medium,3987,80,3
-pune_Kothrud_Road_9,Kothrud Road,18.5254,73.8257,18.5274,73.8277,medium,1836,60,4
-pune_Kothrud_Road_10,Kothrud Road,18.5274,73.8277,18.5294,73.8297,medium,4098,50,4
-pune_Hadapsar_Bypass_0,Hadapsar Bypass,18.5089,73.926,18.5109,73.928,high,610,40,6
-pune_Hadapsar_Bypass_1,Hadapsar Bypass,18.5109,73.928,18.512900000000002,73.93,high,1480,80,2
-pune_Hadapsar_Bypass_2,Hadapsar Bypass,18.512900000000002,73.93,18.5149,73.932,high,2386,60,3
-pune_Hadapsar_Bypass_3,Hadapsar Bypass,18.5149,73.932,18.5169,73.934,high,4470,80,4
-pune_Hadapsar_Bypass_4,Hadapsar Bypass,18.5169,73.934,18.518900000000002,73.936,high,2444,80,2
-pune_Hadapsar_Bypass_5,Hadapsar Bypass,18.518900000000002,73.936,18.5209,73.938,high,4281,60,4
-pune_Hadapsar_Bypass_6,Hadapsar Bypass,18.5209,73.938,18.5229,73.94,high,1070,40,2
-pune_Hadapsar_Bypass_7,Hadapsar Bypass,18.5229,73.94,18.5249,73.94200000000001,high,2711,50,4
-pune_Hadapsar_Bypass_8,Hadapsar Bypass,18.5249,73.94200000000001,18.5269,73.944,high,2097,50,2
-pune_Hadapsar_Bypass_9,Hadapsar Bypass,18.5269,73.944,18.5289,73.946,high,1204,60,4
-pune_Hadapsar_Bypass_10,Hadapsar Bypass,18.5289,73.946,18.5309,73.94800000000001,high,3399,60,3
-pune_Pimpri-Chinchwad_Link_0,Pimpri-Chinchwad Link,18.6298,73.8149,18.6318,73.81689999999999,high,907,80,4
-pune_Pimpri-Chinchwad_Link_1,Pimpri-Chinchwad Link,18.6318,73.81689999999999,18.6338,73.8189,high,1611,50,2
-pune_Pimpri-Chinchwad_Link_2,Pimpri-Chinchwad Link,18.6338,73.8189,18.6358,73.8209,high,4715,50,6
-pune_Pimpri-Chinchwad_Link_3,Pimpri-Chinchwad Link,18.6358,73.8209,18.6378,73.82289999999999,high,3642,50,6
-pune_Pimpri-Chinchwad_Link_4,Pimpri-Chinchwad Link,18.6378,73.82289999999999,18.6398,73.8249,high,1501,40,4
-pune_Pimpri-Chinchwad_Link_5,Pimpri-Chinchwad Link,18.6398,73.8249,18.6418,73.8269,high,3133,50,3
-pune_Pimpri-Chinchwad_Link_6,Pimpri-Chinchwad Link,18.6418,73.8269,18.6438,73.82889999999999,high,3601,40,2
-pune_Pimpri-Chinchwad_Link_7,Pimpri-Chinchwad Link,18.6438,73.82889999999999,18.645799999999998,73.8309,high,3447,50,4
-pune_Pimpri-Chinchwad_Link_8,Pimpri-Chinchwad Link,18.645799999999998,73.8309,18.6478,73.8329,high,2926,60,2
-pune_Pimpri-Chinchwad_Link_9,Pimpri-Chinchwad Link,18.6478,73.8329,18.6498,73.83489999999999,high,1690,40,2
-pune_Pimpri-Chinchwad_Link_10,Pimpri-Chinchwad Link,18.6498,73.83489999999999,18.651799999999998,73.8369,high,2672,50,6
-pune_Wakad_Highway_0,Wakad Highway,18.5978,73.7636,18.5998,73.76559999999999,high,2893,50,3
-pune_Wakad_Highway_1,Wakad Highway,18.5998,73.76559999999999,18.6018,73.7676,high,3573,50,6
-pune_Wakad_Highway_2,Wakad Highway,18.6018,73.7676,18.6038,73.7696,high,3621,50,4
-pune_Wakad_Highway_3,Wakad Highway,18.6038,73.7696,18.6058,73.77159999999999,high,1884,40,3
-pune_Wakad_Highway_4,Wakad Highway,18.6058,73.77159999999999,18.6078,73.7736,high,2369,50,2
-pune_Wakad_Highway_5,Wakad Highway,18.6078,73.7736,18.6098,73.7756,high,1771,60,2
-pune_Wakad_Highway_6,Wakad Highway,18.6098,73.7756,18.6118,73.77759999999999,high,3890,50,2
-pune_Wakad_Highway_7,Wakad Highway,18.6118,73.77759999999999,18.613799999999998,73.7796,high,1558,60,6
-pune_Wakad_Highway_8,Wakad Highway,18.613799999999998,73.7796,18.6158,73.7816,high,3154,50,3
-pune_Baner_Road_0,Baner Road,18.5593,73.7815,18.5613,73.78349999999999,medium,2978,60,4
-pune_Baner_Road_1,Baner Road,18.5613,73.78349999999999,18.5633,73.7855,medium,681,50,6
-pune_Baner_Road_2,Baner Road,18.5633,73.7855,18.5653,73.7875,medium,4693,80,3
-pune_Baner_Road_3,Baner Road,18.5653,73.7875,18.5673,73.78949999999999,medium,3744,80,4
-pune_Baner_Road_4,Baner Road,18.5673,73.78949999999999,18.569300000000002,73.7915,medium,4193,60,6
-pune_Baner_Road_5,Baner Road,18.569300000000002,73.7915,18.5713,73.7935,medium,2509,80,4
-pune_Baner_Road_6,Baner Road,18.5713,73.7935,18.5733,73.79549999999999,medium,2251,40,3
-pune_Baner_Road_7,Baner Road,18.5733,73.79549999999999,18.5753,73.7975,medium,779,40,6
-pune_Baner_Road_8,Baner Road,18.5753,73.7975,18.5773,73.7995,medium,2447,40,6
-pune_Baner_Road_9,Baner Road,18.5773,73.7995,18.5793,73.80149999999999,medium,2194,60,4
-pune_Baner_Road_10,Baner Road,18.5793,73.80149999999999,18.5813,73.8035,medium,2830,60,6
-pune_Deccan_Road_0,Deccan Road,18.5167,73.841,18.5187,73.84299999999999,low,507,40,4
-pune_Deccan_Road_1,Deccan Road,18.5187,73.84299999999999,18.5207,73.845,low,505,40,3
-pune_Deccan_Road_2,Deccan Road,18.5207,73.845,18.5227,73.847,low,1757,80,4
-pune_Deccan_Road_3,Deccan Road,18.5227,73.847,18.5247,73.84899999999999,low,2627,50,2
-pune_Deccan_Road_4,Deccan Road,18.5247,73.84899999999999,18.5267,73.851,low,1587,50,2
-pune_Deccan_Road_5,Deccan Road,18.5267,73.851,18.5287,73.853,low,4317,60,6
-pune_Deccan_Road_6,Deccan Road,18.5287,73.853,18.5307,73.85499999999999,low,1336,50,3
-pune_Deccan_Road_7,Deccan Road,18.5307,73.85499999999999,18.5327,73.857,low,4810,80,2
-pune_Deccan_Road_8,Deccan Road,18.5327,73.857,18.5347,73.859,low,1948,60,6
+pune_Shivajinagar_Road_0,Shivajinagar Road,18.5304,73.8467,18.5324,73.8487,medium,2929,50,4
+pune_Shivajinagar_Road_1,Shivajinagar Road,18.5324,73.8487,18.5344,73.8507,medium,638,50,6
+pune_Shivajinagar_Road_2,Shivajinagar Road,18.5344,73.8507,18.5364,73.8527,medium,858,80,4
+pune_Shivajinagar_Road_3,Shivajinagar Road,18.5364,73.8527,18.5384,73.8547,medium,970,80,3
+pune_Shivajinagar_Road_4,Shivajinagar Road,18.5384,73.8547,18.5404,73.8567,medium,3648,80,6
+pune_Shivajinagar_Road_5,Shivajinagar Road,18.5404,73.8567,18.5424,73.8587,medium,3808,40,4
+pune_Shivajinagar_Road_6,Shivajinagar Road,18.5424,73.8587,18.5444,73.8607,medium,2408,50,4
+pune_Shivajinagar_Road_7,Shivajinagar Road,18.5444,73.8607,18.5464,73.8627,medium,3505,60,2
+pune_Shivajinagar_Road_8,Shivajinagar Road,18.5464,73.8627,18.5484,73.8647,medium,3217,40,4
+pune_Shivajinagar_Road_9,Shivajinagar Road,18.5484,73.8647,18.5504,73.8667,medium,1857,40,4
+pune_Shivajinagar_Road_10,Shivajinagar Road,18.5504,73.8667,18.5524,73.8687,medium,2348,50,2
+pune_Shivajinagar_Road_11,Shivajinagar Road,18.5524,73.8687,18.5544,73.8707,medium,1970,50,4
+pune_Koregaon_Park_Road_0,Koregaon Park Road,18.5362,73.8958,18.5382,73.89779999999999,low,815,40,3
+pune_Koregaon_Park_Road_1,Koregaon Park Road,18.5382,73.89779999999999,18.540200000000002,73.8998,low,2987,40,6
+pune_Koregaon_Park_Road_2,Koregaon Park Road,18.540200000000002,73.8998,18.5422,73.9018,low,3184,40,3
+pune_Koregaon_Park_Road_3,Koregaon Park Road,18.5422,73.9018,18.5442,73.90379999999999,low,915,40,3
+pune_Koregaon_Park_Road_4,Koregaon Park Road,18.5442,73.90379999999999,18.546200000000002,73.9058,low,1668,40,2
+pune_Koregaon_Park_Road_5,Koregaon Park Road,18.546200000000002,73.9058,18.5482,73.9078,low,2205,80,3
+pune_Koregaon_Park_Road_6,Koregaon Park Road,18.5482,73.9078,18.5502,73.90979999999999,low,2958,50,3
+pune_Koregaon_Park_Road_7,Koregaon Park Road,18.5502,73.90979999999999,18.5522,73.9118,low,4423,80,2
+pune_Viman_Nagar_Road_0,Viman Nagar Road,18.5679,73.9143,18.5699,73.91629999999999,medium,1486,60,3
+pune_Viman_Nagar_Road_1,Viman Nagar Road,18.5699,73.91629999999999,18.571900000000003,73.9183,medium,3783,60,2
+pune_Viman_Nagar_Road_2,Viman Nagar Road,18.571900000000003,73.9183,18.573900000000002,73.9203,medium,3900,40,4
+pune_Viman_Nagar_Road_3,Viman Nagar Road,18.573900000000002,73.9203,18.5759,73.92229999999999,medium,1487,60,4
+pune_Viman_Nagar_Road_4,Viman Nagar Road,18.5759,73.92229999999999,18.577900000000003,73.9243,medium,1892,80,3
+pune_Viman_Nagar_Road_5,Viman Nagar Road,18.577900000000003,73.9243,18.579900000000002,73.9263,medium,2396,60,4
+pune_Viman_Nagar_Road_6,Viman Nagar Road,18.579900000000002,73.9263,18.5819,73.9283,medium,3773,50,3
+pune_Viman_Nagar_Road_7,Viman Nagar Road,18.5819,73.9283,18.5839,73.9303,medium,4753,40,4
+pune_Viman_Nagar_Road_8,Viman Nagar Road,18.5839,73.9303,18.585900000000002,73.9323,medium,1570,50,4
+pune_Viman_Nagar_Road_9,Viman Nagar Road,18.585900000000002,73.9323,18.5879,73.9343,medium,1223,60,6
+pune_Hinjewadi_IT_Park_Road_0,Hinjewadi IT Park Road,18.5912,73.7389,18.5932,73.7409,high,4288,80,2
+pune_Hinjewadi_IT_Park_Road_1,Hinjewadi IT Park Road,18.5932,73.7409,18.595200000000002,73.7429,high,567,80,2
+pune_Hinjewadi_IT_Park_Road_2,Hinjewadi IT Park Road,18.595200000000002,73.7429,18.5972,73.7449,high,2004,80,6
+pune_Hinjewadi_IT_Park_Road_3,Hinjewadi IT Park Road,18.5972,73.7449,18.5992,73.7469,high,4916,40,6
+pune_Hinjewadi_IT_Park_Road_4,Hinjewadi IT Park Road,18.5992,73.7469,18.601200000000002,73.7489,high,4164,80,6
+pune_Hinjewadi_IT_Park_Road_5,Hinjewadi IT Park Road,18.601200000000002,73.7489,18.6032,73.7509,high,2444,80,3
+pune_Hinjewadi_IT_Park_Road_6,Hinjewadi IT Park Road,18.6032,73.7509,18.6052,73.7529,high,1867,50,6
+pune_Hinjewadi_IT_Park_Road_7,Hinjewadi IT Park Road,18.6052,73.7529,18.6072,73.7549,high,4958,80,4
+pune_Kothrud_Road_0,Kothrud Road,18.5074,73.8077,18.5094,73.80969999999999,medium,4734,80,4
+pune_Kothrud_Road_1,Kothrud Road,18.5094,73.80969999999999,18.511400000000002,73.8117,medium,2530,80,4
+pune_Kothrud_Road_2,Kothrud Road,18.511400000000002,73.8117,18.5134,73.8137,medium,661,50,4
+pune_Kothrud_Road_3,Kothrud Road,18.5134,73.8137,18.5154,73.81569999999999,medium,1220,60,4
+pune_Kothrud_Road_4,Kothrud Road,18.5154,73.81569999999999,18.517400000000002,73.8177,medium,1073,80,4
+pune_Kothrud_Road_5,Kothrud Road,18.517400000000002,73.8177,18.5194,73.8197,medium,1074,40,2
+pune_Kothrud_Road_6,Kothrud Road,18.5194,73.8197,18.5214,73.82169999999999,medium,1807,80,3
+pune_Kothrud_Road_7,Kothrud Road,18.5214,73.82169999999999,18.5234,73.8237,medium,721,40,3
+pune_Kothrud_Road_8,Kothrud Road,18.5234,73.8237,18.5254,73.8257,medium,1494,40,3
+pune_Kothrud_Road_9,Kothrud Road,18.5254,73.8257,18.5274,73.8277,medium,2397,40,3
+pune_Hadapsar_Bypass_0,Hadapsar Bypass,18.5089,73.926,18.5109,73.928,high,4500,60,6
+pune_Hadapsar_Bypass_1,Hadapsar Bypass,18.5109,73.928,18.512900000000002,73.93,high,4636,40,2
+pune_Hadapsar_Bypass_2,Hadapsar Bypass,18.512900000000002,73.93,18.5149,73.932,high,2154,50,3
+pune_Hadapsar_Bypass_3,Hadapsar Bypass,18.5149,73.932,18.5169,73.934,high,870,50,3
+pune_Hadapsar_Bypass_4,Hadapsar Bypass,18.5169,73.934,18.518900000000002,73.936,high,994,80,4
+pune_Hadapsar_Bypass_5,Hadapsar Bypass,18.518900000000002,73.936,18.5209,73.938,high,3556,50,3
+pune_Hadapsar_Bypass_6,Hadapsar Bypass,18.5209,73.938,18.5229,73.94,high,4330,50,2
+pune_Hadapsar_Bypass_7,Hadapsar Bypass,18.5229,73.94,18.5249,73.94200000000001,high,1637,60,3
+pune_Pimpri-Chinchwad_Link_0,Pimpri-Chinchwad Link,18.6298,73.8149,18.6318,73.81689999999999,high,4575,60,6
+pune_Pimpri-Chinchwad_Link_1,Pimpri-Chinchwad Link,18.6318,73.81689999999999,18.6338,73.8189,high,4743,50,4
+pune_Pimpri-Chinchwad_Link_2,Pimpri-Chinchwad Link,18.6338,73.8189,18.6358,73.8209,high,2288,80,2
+pune_Pimpri-Chinchwad_Link_3,Pimpri-Chinchwad Link,18.6358,73.8209,18.6378,73.82289999999999,high,1281,80,3
+pune_Pimpri-Chinchwad_Link_4,Pimpri-Chinchwad Link,18.6378,73.82289999999999,18.6398,73.8249,high,778,60,2
+pune_Pimpri-Chinchwad_Link_5,Pimpri-Chinchwad Link,18.6398,73.8249,18.6418,73.8269,high,3405,80,4
+pune_Pimpri-Chinchwad_Link_6,Pimpri-Chinchwad Link,18.6418,73.8269,18.6438,73.82889999999999,high,852,50,6
+pune_Pimpri-Chinchwad_Link_7,Pimpri-Chinchwad Link,18.6438,73.82889999999999,18.645799999999998,73.8309,high,3247,60,6
+pune_Wakad_Highway_0,Wakad Highway,18.5978,73.7636,18.5998,73.76559999999999,high,2392,50,4
+pune_Wakad_Highway_1,Wakad Highway,18.5998,73.76559999999999,18.6018,73.7676,high,3977,50,6
+pune_Wakad_Highway_2,Wakad Highway,18.6018,73.7676,18.6038,73.7696,high,2469,40,2
+pune_Wakad_Highway_3,Wakad Highway,18.6038,73.7696,18.6058,73.77159999999999,high,1808,60,3
+pune_Wakad_Highway_4,Wakad Highway,18.6058,73.77159999999999,18.6078,73.7736,high,2332,40,4
+pune_Wakad_Highway_5,Wakad Highway,18.6078,73.7736,18.6098,73.7756,high,3930,40,6
+pune_Wakad_Highway_6,Wakad Highway,18.6098,73.7756,18.6118,73.77759999999999,high,819,50,2
+pune_Wakad_Highway_7,Wakad Highway,18.6118,73.77759999999999,18.613799999999998,73.7796,high,4066,50,4
+pune_Wakad_Highway_8,Wakad Highway,18.613799999999998,73.7796,18.6158,73.7816,high,2065,80,6
+pune_Wakad_Highway_9,Wakad Highway,18.6158,73.7816,18.6178,73.78359999999999,high,3344,80,3
+pune_Wakad_Highway_10,Wakad Highway,18.6178,73.78359999999999,18.619799999999998,73.7856,high,4939,80,4
+pune_Wakad_Highway_11,Wakad Highway,18.619799999999998,73.7856,18.6218,73.7876,high,513,60,3
+pune_Baner_Road_0,Baner Road,18.5593,73.7815,18.5613,73.78349999999999,medium,4488,60,3
+pune_Baner_Road_1,Baner Road,18.5613,73.78349999999999,18.5633,73.7855,medium,2622,50,6
+pune_Baner_Road_2,Baner Road,18.5633,73.7855,18.5653,73.7875,medium,1151,60,4
+pune_Baner_Road_3,Baner Road,18.5653,73.7875,18.5673,73.78949999999999,medium,576,40,4
+pune_Baner_Road_4,Baner Road,18.5673,73.78949999999999,18.569300000000002,73.7915,medium,4986,40,4
+pune_Baner_Road_5,Baner Road,18.569300000000002,73.7915,18.5713,73.7935,medium,4060,40,3
+pune_Baner_Road_6,Baner Road,18.5713,73.7935,18.5733,73.79549999999999,medium,1833,40,3
+pune_Baner_Road_7,Baner Road,18.5733,73.79549999999999,18.5753,73.7975,medium,4772,40,6
+pune_Baner_Road_8,Baner Road,18.5753,73.7975,18.5773,73.7995,medium,1201,50,3
+pune_Baner_Road_9,Baner Road,18.5773,73.7995,18.5793,73.80149999999999,medium,4133,50,2
+pune_Baner_Road_10,Baner Road,18.5793,73.80149999999999,18.5813,73.8035,medium,967,50,4
+pune_Baner_Road_11,Baner Road,18.5813,73.8035,18.5833,73.8055,medium,1747,40,3
+pune_Deccan_Road_0,Deccan Road,18.5167,73.841,18.5187,73.84299999999999,low,4286,60,3
+pune_Deccan_Road_1,Deccan Road,18.5187,73.84299999999999,18.5207,73.845,low,3269,40,6
+pune_Deccan_Road_2,Deccan Road,18.5207,73.845,18.5227,73.847,low,4121,50,2
+pune_Deccan_Road_3,Deccan Road,18.5227,73.847,18.5247,73.84899999999999,low,4055,60,6
+pune_Deccan_Road_4,Deccan Road,18.5247,73.84899999999999,18.5267,73.851,low,2912,80,6
+pune_Deccan_Road_5,Deccan Road,18.5267,73.851,18.5287,73.853,low,1708,80,4
+pune_Deccan_Road_6,Deccan Road,18.5287,73.853,18.5307,73.85499999999999,low,2274,60,4
+pune_Deccan_Road_7,Deccan Road,18.5307,73.85499999999999,18.5327,73.857,low,1157,50,4

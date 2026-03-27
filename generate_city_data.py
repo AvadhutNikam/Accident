@@ -65,6 +65,38 @@ CITY_CONFIGS = {
             {"name": "Indiranagar 100ft Road", "lat": 12.9784, "lon": 77.6408, "risk": "low"},
             {"name": "Marathahalli Bridge Road", "lat": 12.9591, "lon": 77.7012, "risk": "high"}
         ]
+    },
+    'chennai': {
+        'name': 'Chennai',
+        'roads': [
+            {"name": "Anna Salai", "lat": 13.0604, "lon": 80.2608, "risk": "high"},
+            {"name": "OMR", "lat": 12.9229, "lon": 80.2300, "risk": "medium"},
+            {"name": "ECR", "lat": 12.8228, "lon": 80.2241, "risk": "high"},
+             {"name": "Mount Road", "lat": 13.0069, "lon": 80.2201, "risk": "medium"}
+        ]
+    },
+    'kolkata': {
+        'name': 'Kolkata',
+        'roads': [
+            {"name": "Park Street", "lat": 22.5516, "lon": 88.3519, "risk": "medium"},
+            {"name": "AJC Bose Road", "lat": 22.5401, "lon": 88.3533, "risk": "high"},
+            {"name": "EM Bypass", "lat": 22.5694, "lon": 88.4116, "risk": "high"}
+        ]
+    },
+    'hyderabad': {
+        'name': 'Hyderabad',
+        'roads': [
+            {"name": "Necklace Road", "lat": 17.4162, "lon": 78.4716, "risk": "low"},
+            {"name": "ORR", "lat": 17.4312, "lon": 78.3364, "risk": "high"},
+            {"name": "Banjara Hills Rd 1", "lat": 17.4156, "lon": 78.4357, "risk": "medium"}
+        ]
+    },
+    'chandigarh': {
+        'name': 'Chandigarh',
+        'roads': [
+            {"name": "Madhya Marg", "lat": 30.7333, "lon": 76.7794, "risk": "low"},
+            {"name": "Dakshin Marg", "lat": 30.7139, "lon": 76.7667, "risk": "medium"}
+        ]
     }
 }
 
@@ -150,21 +182,12 @@ def process_city(city_id):
             print(f"✅ Created {f}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--city', type=str, help='City ID to generate data for')
-    parser.add_argument('--all', action='store_true', help='Generate data for all cities')
-    args = parser.parse_args()
-
-    cities_to_process = []
-    if args.all:
-        cities_to_process = list(CITY_CONFIGS.keys())
-    elif args.city:
-        if args.city in CITY_CONFIGS:
-            cities_to_process = [args.city]
-        else:
-            print(f"Error: City {args.city} not found in config")
-    else:
-        print("Please specify --city [city_id] or --all")
-
-    for city in cities_to_process:
-        process_city(city)
+    print("\n============================================================")
+    print("                SAFE ROUTE SYSTEM UPDATED                 ")
+    print("============================================================")
+    print("Notice: The synthetic data generation pipeline has been ")
+    print("deprecated. The True Kaggle real-world accident dataset ")
+    print("is now natively powering this project (see preprocess_kaggle_data.py).")
+    print("\nTo avoid replacing the authentic historical training data ")
+    print("with randomized mock data, this execution block is disabled.")
+    print("============================================================\n")

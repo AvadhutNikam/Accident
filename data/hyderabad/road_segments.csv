@@ -1,0 +1,29 @@
+segment_id,road_name,start_lat,start_lon,end_lat,end_lon,risk_level,avg_traffic,speed_limit,lanes
+hyderabad_Necklace_Road_0,Necklace Road,17.4162,78.4716,17.4182,78.47359999999999,low,2728,40,3
+hyderabad_Necklace_Road_1,Necklace Road,17.4182,78.47359999999999,17.4202,78.4756,low,1414,60,4
+hyderabad_Necklace_Road_2,Necklace Road,17.4202,78.4756,17.4222,78.4776,low,1213,40,4
+hyderabad_Necklace_Road_3,Necklace Road,17.4222,78.4776,17.4242,78.47959999999999,low,3996,50,3
+hyderabad_Necklace_Road_4,Necklace Road,17.4242,78.47959999999999,17.4262,78.4816,low,1866,50,2
+hyderabad_Necklace_Road_5,Necklace Road,17.4262,78.4816,17.4282,78.4836,low,1971,40,4
+hyderabad_Necklace_Road_6,Necklace Road,17.4282,78.4836,17.4302,78.48559999999999,low,1856,80,2
+hyderabad_Necklace_Road_7,Necklace Road,17.4302,78.48559999999999,17.432199999999998,78.4876,low,3501,80,3
+hyderabad_Necklace_Road_8,Necklace Road,17.432199999999998,78.4876,17.4342,78.4896,low,4354,50,3
+hyderabad_Necklace_Road_9,Necklace Road,17.4342,78.4896,17.4362,78.49159999999999,low,4477,40,4
+hyderabad_Necklace_Road_10,Necklace Road,17.4362,78.49159999999999,17.4382,78.4936,low,1661,40,3
+hyderabad_Necklace_Road_11,Necklace Road,17.4382,78.4936,17.4402,78.4956,low,4838,80,4
+hyderabad_ORR_0,ORR,17.4312,78.3364,17.4332,78.3384,high,614,80,4
+hyderabad_ORR_1,ORR,17.4332,78.3384,17.435200000000002,78.3404,high,586,60,2
+hyderabad_ORR_2,ORR,17.435200000000002,78.3404,17.4372,78.3424,high,1016,60,2
+hyderabad_ORR_3,ORR,17.4372,78.3424,17.4392,78.3444,high,1470,40,3
+hyderabad_ORR_4,ORR,17.4392,78.3444,17.441200000000002,78.3464,high,1499,50,3
+hyderabad_ORR_5,ORR,17.441200000000002,78.3464,17.4432,78.3484,high,2263,80,6
+hyderabad_ORR_6,ORR,17.4432,78.3484,17.4452,78.3504,high,595,80,4
+hyderabad_ORR_7,ORR,17.4452,78.3504,17.4472,78.3524,high,3249,50,6
+hyderabad_Banjara_Hills_Rd_1_0,Banjara Hills Rd 1,17.4156,78.4357,17.4176,78.43769999999999,medium,1211,50,2
+hyderabad_Banjara_Hills_Rd_1_1,Banjara Hills Rd 1,17.4176,78.43769999999999,17.419600000000003,78.4397,medium,3202,40,6
+hyderabad_Banjara_Hills_Rd_1_2,Banjara Hills Rd 1,17.419600000000003,78.4397,17.4216,78.4417,medium,1953,80,3
+hyderabad_Banjara_Hills_Rd_1_3,Banjara Hills Rd 1,17.4216,78.4417,17.4236,78.44369999999999,medium,3968,40,2
+hyderabad_Banjara_Hills_Rd_1_4,Banjara Hills Rd 1,17.4236,78.44369999999999,17.425600000000003,78.4457,medium,2771,40,3
+hyderabad_Banjara_Hills_Rd_1_5,Banjara Hills Rd 1,17.425600000000003,78.4457,17.4276,78.4477,medium,4240,40,3
+hyderabad_Banjara_Hills_Rd_1_6,Banjara Hills Rd 1,17.4276,78.4477,17.4296,78.44969999999999,medium,4340,80,6
+hyderabad_Banjara_Hills_Rd_1_7,Banjara Hills Rd 1,17.4296,78.44969999999999,17.4316,78.4517,medium,4016,80,4

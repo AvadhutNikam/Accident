@@ -1,0 +1,25 @@
+segment_id,road_name,start_lat,start_lon,end_lat,end_lon,risk_level,avg_traffic,speed_limit,lanes
+chandigarh_Madhya_Marg_0,Madhya Marg,30.7333,76.7794,30.7353,76.78139999999999,low,1020,50,6
+chandigarh_Madhya_Marg_1,Madhya Marg,30.7353,76.78139999999999,30.7373,76.7834,low,752,80,4
+chandigarh_Madhya_Marg_2,Madhya Marg,30.7373,76.7834,30.7393,76.7854,low,2211,40,2
+chandigarh_Madhya_Marg_3,Madhya Marg,30.7393,76.7854,30.7413,76.78739999999999,low,4068,40,3
+chandigarh_Madhya_Marg_4,Madhya Marg,30.7413,76.78739999999999,30.7433,76.7894,low,3915,80,4
+chandigarh_Madhya_Marg_5,Madhya Marg,30.7433,76.7894,30.7453,76.7914,low,4445,80,3
+chandigarh_Madhya_Marg_6,Madhya Marg,30.7453,76.7914,30.7473,76.79339999999999,low,1309,40,6
+chandigarh_Madhya_Marg_7,Madhya Marg,30.7473,76.79339999999999,30.749299999999998,76.7954,low,2302,80,6
+chandigarh_Madhya_Marg_8,Madhya Marg,30.749299999999998,76.7954,30.7513,76.7974,low,3146,60,2
+chandigarh_Madhya_Marg_9,Madhya Marg,30.7513,76.7974,30.7533,76.79939999999999,low,3904,60,4
+chandigarh_Madhya_Marg_10,Madhya Marg,30.7533,76.79939999999999,30.7553,76.8014,low,2705,50,3
+chandigarh_Madhya_Marg_11,Madhya Marg,30.7553,76.8014,30.7573,76.8034,low,1585,40,6
+chandigarh_Dakshin_Marg_0,Dakshin Marg,30.7139,76.7667,30.715899999999998,76.7687,medium,2655,60,6
+chandigarh_Dakshin_Marg_1,Dakshin Marg,30.715899999999998,76.7687,30.7179,76.7707,medium,666,60,3
+chandigarh_Dakshin_Marg_2,Dakshin Marg,30.7179,76.7707,30.7199,76.7727,medium,4513,50,3
+chandigarh_Dakshin_Marg_3,Dakshin Marg,30.7199,76.7727,30.721899999999998,76.7747,medium,3285,60,4
+chandigarh_Dakshin_Marg_4,Dakshin Marg,30.721899999999998,76.7747,30.7239,76.7767,medium,4116,50,2
+chandigarh_Dakshin_Marg_5,Dakshin Marg,30.7239,76.7767,30.7259,76.7787,medium,1031,60,6
+chandigarh_Dakshin_Marg_6,Dakshin Marg,30.7259,76.7787,30.727899999999998,76.7807,medium,3404,50,2
+chandigarh_Dakshin_Marg_7,Dakshin Marg,30.727899999999998,76.7807,30.729899999999997,76.7827,medium,4489,50,2
+chandigarh_Dakshin_Marg_8,Dakshin Marg,30.729899999999997,76.7827,30.7319,76.7847,medium,1032,40,3
+chandigarh_Dakshin_Marg_9,Dakshin Marg,30.7319,76.7847,30.7339,76.7867,medium,2595,50,2
+chandigarh_Dakshin_Marg_10,Dakshin Marg,30.7339,76.7867,30.735899999999997,76.7887,medium,1715,80,3
+chandigarh_Dakshin_Marg_11,Dakshin Marg,30.735899999999997,76.7887,30.7379,76.7907,medium,2656,40,6

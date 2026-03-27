@@ -1,101 +1,98 @@
 segment_id,road_name,start_lat,start_lon,end_lat,end_lon,risk_level,avg_traffic,speed_limit,lanes
-mumbai_Western_Express_Highway_0,Western Express Highway,19.1136,72.8697,19.1156,72.87169999999999,high,4160,50,4
-mumbai_Western_Express_Highway_1,Western Express Highway,19.1156,72.87169999999999,19.117600000000003,72.8737,high,1603,80,3
-mumbai_Western_Express_Highway_2,Western Express Highway,19.117600000000003,72.8737,19.119600000000002,72.8757,high,4345,50,4
-mumbai_Western_Express_Highway_3,Western Express Highway,19.119600000000002,72.8757,19.1216,72.87769999999999,high,3855,80,4
-mumbai_Western_Express_Highway_4,Western Express Highway,19.1216,72.87769999999999,19.123600000000003,72.8797,high,4773,80,6
-mumbai_Western_Express_Highway_5,Western Express Highway,19.123600000000003,72.8797,19.125600000000002,72.8817,high,546,60,6
-mumbai_Western_Express_Highway_6,Western Express Highway,19.125600000000002,72.8817,19.1276,72.88369999999999,high,1656,80,4
-mumbai_Western_Express_Highway_7,Western Express Highway,19.1276,72.88369999999999,19.1296,72.8857,high,4899,50,2
-mumbai_Eastern_Express_Highway_0,Eastern Express Highway,19.1076,72.8856,19.1096,72.88759999999999,high,1708,60,2
-mumbai_Eastern_Express_Highway_1,Eastern Express Highway,19.1096,72.88759999999999,19.111600000000003,72.8896,high,779,60,4
-mumbai_Eastern_Express_Highway_2,Eastern Express Highway,19.111600000000003,72.8896,19.1136,72.8916,high,755,40,4
-mumbai_Eastern_Express_Highway_3,Eastern Express Highway,19.1136,72.8916,19.1156,72.89359999999999,high,4857,80,2
-mumbai_Eastern_Express_Highway_4,Eastern Express Highway,19.1156,72.89359999999999,19.117600000000003,72.8956,high,2463,60,3
-mumbai_Eastern_Express_Highway_5,Eastern Express Highway,19.117600000000003,72.8956,19.119600000000002,72.8976,high,1361,40,6
-mumbai_Eastern_Express_Highway_6,Eastern Express Highway,19.119600000000002,72.8976,19.1216,72.89959999999999,high,2483,60,2
-mumbai_Eastern_Express_Highway_7,Eastern Express Highway,19.1216,72.89959999999999,19.1236,72.9016,high,1802,50,4
-mumbai_Eastern_Express_Highway_8,Eastern Express Highway,19.1236,72.9016,19.125600000000002,72.9036,high,2299,50,4
-mumbai_Eastern_Express_Highway_9,Eastern Express Highway,19.125600000000002,72.9036,19.1276,72.90559999999999,high,1413,50,6
-mumbai_Sion-Panvel_Highway_0,Sion-Panvel Highway,19.0433,72.9265,19.045299999999997,72.9285,medium,2375,80,4
-mumbai_Sion-Panvel_Highway_1,Sion-Panvel Highway,19.045299999999997,72.9285,19.0473,72.93050000000001,medium,4736,80,3
-mumbai_Sion-Panvel_Highway_2,Sion-Panvel Highway,19.0473,72.93050000000001,19.0493,72.9325,medium,3928,50,3
-mumbai_Sion-Panvel_Highway_3,Sion-Panvel Highway,19.0493,72.9325,19.051299999999998,72.9345,medium,1017,60,2
-mumbai_Sion-Panvel_Highway_4,Sion-Panvel Highway,19.051299999999998,72.9345,19.0533,72.93650000000001,medium,1351,60,3
-mumbai_Sion-Panvel_Highway_5,Sion-Panvel Highway,19.0533,72.93650000000001,19.0553,72.9385,medium,3955,80,6
-mumbai_Sion-Panvel_Highway_6,Sion-Panvel Highway,19.0553,72.9385,19.057299999999998,72.9405,medium,2519,50,2
-mumbai_Sion-Panvel_Highway_7,Sion-Panvel Highway,19.057299999999998,72.9405,19.059299999999997,72.94250000000001,medium,1684,50,2
-mumbai_LBS_Marg_0,LBS Marg,19.0728,72.8987,19.0748,72.9007,medium,2607,50,3
-mumbai_LBS_Marg_1,LBS Marg,19.0748,72.9007,19.076800000000002,72.90270000000001,medium,4388,50,4
-mumbai_LBS_Marg_2,LBS Marg,19.076800000000002,72.90270000000001,19.0788,72.9047,medium,3109,60,6
-mumbai_LBS_Marg_3,LBS Marg,19.0788,72.9047,19.0808,72.9067,medium,1396,50,2
-mumbai_LBS_Marg_4,LBS Marg,19.0808,72.9067,19.082800000000002,72.90870000000001,medium,3819,80,6
-mumbai_LBS_Marg_5,LBS Marg,19.082800000000002,72.90870000000001,19.0848,72.9107,medium,2656,50,6
-mumbai_LBS_Marg_6,LBS Marg,19.0848,72.9107,19.0868,72.9127,medium,3785,50,4
-mumbai_LBS_Marg_7,LBS Marg,19.0868,72.9127,19.0888,72.91470000000001,medium,2840,60,2
-mumbai_LBS_Marg_8,LBS Marg,19.0888,72.91470000000001,19.0908,72.9167,medium,2238,50,4
-mumbai_LBS_Marg_9,LBS Marg,19.0908,72.9167,19.0928,72.9187,medium,4830,80,2
-mumbai_LBS_Marg_10,LBS Marg,19.0928,72.9187,19.0948,72.92070000000001,medium,1346,40,6
-mumbai_SV_Road_Andheri_0,SV Road Andheri,19.1136,72.8347,19.1156,72.8367,medium,2627,40,2
-mumbai_SV_Road_Andheri_1,SV Road Andheri,19.1156,72.8367,19.117600000000003,72.8387,medium,1215,40,2
-mumbai_SV_Road_Andheri_2,SV Road Andheri,19.117600000000003,72.8387,19.119600000000002,72.8407,medium,3326,80,2
-mumbai_SV_Road_Andheri_3,SV Road Andheri,19.119600000000002,72.8407,19.1216,72.8427,medium,1019,40,3
-mumbai_SV_Road_Andheri_4,SV Road Andheri,19.1216,72.8427,19.123600000000003,72.8447,medium,3160,60,6
-mumbai_SV_Road_Andheri_5,SV Road Andheri,19.123600000000003,72.8447,19.125600000000002,72.8467,medium,2225,80,4
-mumbai_SV_Road_Andheri_6,SV Road Andheri,19.125600000000002,72.8467,19.1276,72.8487,medium,3212,50,6
-mumbai_SV_Road_Andheri_7,SV Road Andheri,19.1276,72.8487,19.1296,72.8507,medium,1325,50,6
-mumbai_SV_Road_Andheri_8,SV Road Andheri,19.1296,72.8507,19.131600000000002,72.8527,medium,4333,60,4
-mumbai_SV_Road_Andheri_9,SV Road Andheri,19.131600000000002,72.8527,19.1336,72.8547,medium,1236,60,3
-mumbai_SV_Road_Andheri_10,SV Road Andheri,19.1336,72.8547,19.1356,72.8567,medium,4763,50,4
-mumbai_Linking_Road_Bandra_0,Linking Road Bandra,19.0596,72.8295,19.0616,72.83149999999999,low,1729,80,6
-mumbai_Linking_Road_Bandra_1,Linking Road Bandra,19.0616,72.83149999999999,19.0636,72.8335,low,1503,80,3
-mumbai_Linking_Road_Bandra_2,Linking Road Bandra,19.0636,72.8335,19.0656,72.8355,low,2055,80,2
-mumbai_Linking_Road_Bandra_3,Linking Road Bandra,19.0656,72.8355,19.0676,72.83749999999999,low,1589,60,6
-mumbai_Linking_Road_Bandra_4,Linking Road Bandra,19.0676,72.83749999999999,19.0696,72.8395,low,3345,40,3
-mumbai_Linking_Road_Bandra_5,Linking Road Bandra,19.0696,72.8395,19.0716,72.8415,low,3654,60,2
-mumbai_Linking_Road_Bandra_6,Linking Road Bandra,19.0716,72.8415,19.0736,72.84349999999999,low,1540,40,4
-mumbai_Linking_Road_Bandra_7,Linking Road Bandra,19.0736,72.84349999999999,19.075599999999998,72.8455,low,3351,40,2
-mumbai_Linking_Road_Bandra_8,Linking Road Bandra,19.075599999999998,72.8455,19.0776,72.8475,low,1703,40,3
-mumbai_Marine_Drive_0,Marine Drive,18.9432,72.8236,18.9452,72.8256,low,920,40,2
-mumbai_Marine_Drive_1,Marine Drive,18.9452,72.8256,18.947200000000002,72.8276,low,1011,80,4
-mumbai_Marine_Drive_2,Marine Drive,18.947200000000002,72.8276,18.9492,72.8296,low,2654,40,2
-mumbai_Marine_Drive_3,Marine Drive,18.9492,72.8296,18.9512,72.8316,low,975,40,4
-mumbai_Marine_Drive_4,Marine Drive,18.9512,72.8316,18.953200000000002,72.8336,low,4967,60,2
-mumbai_Marine_Drive_5,Marine Drive,18.953200000000002,72.8336,18.9552,72.8356,low,988,60,3
-mumbai_Marine_Drive_6,Marine Drive,18.9552,72.8356,18.9572,72.8376,low,3812,50,3
-mumbai_Marine_Drive_7,Marine Drive,18.9572,72.8376,18.9592,72.8396,low,1103,50,2
-mumbai_Marine_Drive_8,Marine Drive,18.9592,72.8396,18.9612,72.8416,low,4504,40,6
-mumbai_Worli_Sea_Link_0,Worli Sea Link,19.0176,72.8125,19.0196,72.8145,medium,2538,60,4
-mumbai_Worli_Sea_Link_1,Worli Sea Link,19.0196,72.8145,19.021600000000003,72.8165,medium,634,40,2
-mumbai_Worli_Sea_Link_2,Worli Sea Link,19.021600000000003,72.8165,19.023600000000002,72.8185,medium,1590,60,3
-mumbai_Worli_Sea_Link_3,Worli Sea Link,19.023600000000002,72.8185,19.0256,72.8205,medium,650,60,4
-mumbai_Worli_Sea_Link_4,Worli Sea Link,19.0256,72.8205,19.027600000000003,72.8225,medium,955,40,3
-mumbai_Worli_Sea_Link_5,Worli Sea Link,19.027600000000003,72.8225,19.029600000000002,72.8245,medium,4511,50,3
-mumbai_Worli_Sea_Link_6,Worli Sea Link,19.029600000000002,72.8245,19.0316,72.8265,medium,2082,60,3
-mumbai_Worli_Sea_Link_7,Worli Sea Link,19.0316,72.8265,19.0336,72.8285,medium,3659,40,3
-mumbai_Worli_Sea_Link_8,Worli Sea Link,19.0336,72.8285,19.035600000000002,72.8305,medium,4912,40,4
-mumbai_Worli_Sea_Link_9,Worli Sea Link,19.035600000000002,72.8305,19.0376,72.8325,medium,1022,50,3
-mumbai_Jogeshwari-Vikhroli_Link_Road_0,Jogeshwari-Vikhroli Link Road,19.1258,72.9167,19.1278,72.9187,high,2727,40,6
-mumbai_Jogeshwari-Vikhroli_Link_Road_1,Jogeshwari-Vikhroli Link Road,19.1278,72.9187,19.129800000000003,72.92070000000001,high,1145,50,4
-mumbai_Jogeshwari-Vikhroli_Link_Road_2,Jogeshwari-Vikhroli Link Road,19.129800000000003,72.92070000000001,19.131800000000002,72.9227,high,974,60,2
-mumbai_Jogeshwari-Vikhroli_Link_Road_3,Jogeshwari-Vikhroli Link Road,19.131800000000002,72.9227,19.1338,72.9247,high,533,60,6
-mumbai_Jogeshwari-Vikhroli_Link_Road_4,Jogeshwari-Vikhroli Link Road,19.1338,72.9247,19.135800000000003,72.92670000000001,high,3965,60,3
-mumbai_Jogeshwari-Vikhroli_Link_Road_5,Jogeshwari-Vikhroli Link Road,19.135800000000003,72.92670000000001,19.137800000000002,72.9287,high,4862,40,4
-mumbai_Jogeshwari-Vikhroli_Link_Road_6,Jogeshwari-Vikhroli Link Road,19.137800000000002,72.9287,19.1398,72.9307,high,2290,80,2
-mumbai_Jogeshwari-Vikhroli_Link_Road_7,Jogeshwari-Vikhroli Link Road,19.1398,72.9307,19.1418,72.93270000000001,high,2850,80,4
-mumbai_Jogeshwari-Vikhroli_Link_Road_8,Jogeshwari-Vikhroli Link Road,19.1418,72.93270000000001,19.143800000000002,72.9347,high,3644,60,6
-mumbai_Jogeshwari-Vikhroli_Link_Road_9,Jogeshwari-Vikhroli Link Road,19.143800000000002,72.9347,19.1458,72.9367,high,699,80,3
-mumbai_Jogeshwari-Vikhroli_Link_Road_10,Jogeshwari-Vikhroli Link Road,19.1458,72.9367,19.1478,72.93870000000001,high,2150,60,6
-mumbai_Jogeshwari-Vikhroli_Link_Road_11,Jogeshwari-Vikhroli Link Road,19.1478,72.93870000000001,19.149800000000003,72.9407,high,2654,40,2
-mumbai_Ghodbunder_Road_0,Ghodbunder Road,19.2183,72.9781,19.220299999999998,72.9801,high,4854,60,6
-mumbai_Ghodbunder_Road_1,Ghodbunder Road,19.220299999999998,72.9801,19.2223,72.9821,high,3789,50,4
-mumbai_Ghodbunder_Road_2,Ghodbunder Road,19.2223,72.9821,19.2243,72.9841,high,1381,60,4
-mumbai_Ghodbunder_Road_3,Ghodbunder Road,19.2243,72.9841,19.2263,72.9861,high,3501,50,4
-mumbai_Ghodbunder_Road_4,Ghodbunder Road,19.2263,72.9861,19.2283,72.9881,high,1700,50,2
-mumbai_Ghodbunder_Road_5,Ghodbunder Road,19.2283,72.9881,19.2303,72.9901,high,953,50,4
-mumbai_Ghodbunder_Road_6,Ghodbunder Road,19.2303,72.9901,19.2323,72.9921,high,3259,60,2
-mumbai_Ghodbunder_Road_7,Ghodbunder Road,19.2323,72.9921,19.234299999999998,72.9941,high,3308,40,4
-mumbai_Ghodbunder_Road_8,Ghodbunder Road,19.234299999999998,72.9941,19.2363,72.9961,high,2526,60,3
-mumbai_Ghodbunder_Road_9,Ghodbunder Road,19.2363,72.9961,19.2383,72.9981,high,4128,50,3
-mumbai_Ghodbunder_Road_10,Ghodbunder Road,19.2383,72.9981,19.240299999999998,73.0001,high,3079,80,6
-mumbai_Ghodbunder_Road_11,Ghodbunder Road,19.240299999999998,73.0001,19.2423,73.0021,high,3078,40,2
+mumbai_Western_Express_Highway_0,Western Express Highway,19.1136,72.8697,19.1156,72.87169999999999,high,1000,40,2
+mumbai_Western_Express_Highway_1,Western Express Highway,19.1156,72.87169999999999,19.117600000000003,72.8737,high,4712,80,3
+mumbai_Western_Express_Highway_2,Western Express Highway,19.117600000000003,72.8737,19.119600000000002,72.8757,high,3298,60,4
+mumbai_Western_Express_Highway_3,Western Express Highway,19.119600000000002,72.8757,19.1216,72.87769999999999,high,1127,50,6
+mumbai_Western_Express_Highway_4,Western Express Highway,19.1216,72.87769999999999,19.123600000000003,72.8797,high,2742,80,2
+mumbai_Western_Express_Highway_5,Western Express Highway,19.123600000000003,72.8797,19.125600000000002,72.8817,high,1847,80,4
+mumbai_Western_Express_Highway_6,Western Express Highway,19.125600000000002,72.8817,19.1276,72.88369999999999,high,4438,80,4
+mumbai_Western_Express_Highway_7,Western Express Highway,19.1276,72.88369999999999,19.1296,72.8857,high,1984,50,4
+mumbai_Western_Express_Highway_8,Western Express Highway,19.1296,72.8857,19.131600000000002,72.8877,high,4506,50,4
+mumbai_Western_Express_Highway_9,Western Express Highway,19.131600000000002,72.8877,19.1336,72.88969999999999,high,1009,50,3
+mumbai_Eastern_Express_Highway_0,Eastern Express Highway,19.1076,72.8856,19.1096,72.88759999999999,high,1441,50,6
+mumbai_Eastern_Express_Highway_1,Eastern Express Highway,19.1096,72.88759999999999,19.111600000000003,72.8896,high,3047,40,6
+mumbai_Eastern_Express_Highway_2,Eastern Express Highway,19.111600000000003,72.8896,19.1136,72.8916,high,1699,50,6
+mumbai_Eastern_Express_Highway_3,Eastern Express Highway,19.1136,72.8916,19.1156,72.89359999999999,high,4087,40,6
+mumbai_Eastern_Express_Highway_4,Eastern Express Highway,19.1156,72.89359999999999,19.117600000000003,72.8956,high,2072,80,2
+mumbai_Eastern_Express_Highway_5,Eastern Express Highway,19.117600000000003,72.8956,19.119600000000002,72.8976,high,2299,60,2
+mumbai_Eastern_Express_Highway_6,Eastern Express Highway,19.119600000000002,72.8976,19.1216,72.89959999999999,high,3846,40,4
+mumbai_Eastern_Express_Highway_7,Eastern Express Highway,19.1216,72.89959999999999,19.1236,72.9016,high,4822,40,2
+mumbai_Eastern_Express_Highway_8,Eastern Express Highway,19.1236,72.9016,19.125600000000002,72.9036,high,2396,40,4
+mumbai_Eastern_Express_Highway_9,Eastern Express Highway,19.125600000000002,72.9036,19.1276,72.90559999999999,high,2452,50,6
+mumbai_Eastern_Express_Highway_10,Eastern Express Highway,19.1276,72.90559999999999,19.1296,72.9076,high,3366,60,4
+mumbai_Eastern_Express_Highway_11,Eastern Express Highway,19.1296,72.9076,19.131600000000002,72.9096,high,3845,50,4
+mumbai_Sion-Panvel_Highway_0,Sion-Panvel Highway,19.0433,72.9265,19.045299999999997,72.9285,medium,829,60,2
+mumbai_Sion-Panvel_Highway_1,Sion-Panvel Highway,19.045299999999997,72.9285,19.0473,72.93050000000001,medium,3091,50,2
+mumbai_Sion-Panvel_Highway_2,Sion-Panvel Highway,19.0473,72.93050000000001,19.0493,72.9325,medium,4834,80,6
+mumbai_Sion-Panvel_Highway_3,Sion-Panvel Highway,19.0493,72.9325,19.051299999999998,72.9345,medium,3373,40,3
+mumbai_Sion-Panvel_Highway_4,Sion-Panvel Highway,19.051299999999998,72.9345,19.0533,72.93650000000001,medium,4872,50,6
+mumbai_Sion-Panvel_Highway_5,Sion-Panvel Highway,19.0533,72.93650000000001,19.0553,72.9385,medium,3158,60,4
+mumbai_Sion-Panvel_Highway_6,Sion-Panvel Highway,19.0553,72.9385,19.057299999999998,72.9405,medium,729,50,4
+mumbai_Sion-Panvel_Highway_7,Sion-Panvel Highway,19.057299999999998,72.9405,19.059299999999997,72.94250000000001,medium,2355,60,2
+mumbai_LBS_Marg_0,LBS Marg,19.0728,72.8987,19.0748,72.9007,medium,1361,40,6
+mumbai_LBS_Marg_1,LBS Marg,19.0748,72.9007,19.076800000000002,72.90270000000001,medium,2027,80,2
+mumbai_LBS_Marg_2,LBS Marg,19.076800000000002,72.90270000000001,19.0788,72.9047,medium,3989,60,4
+mumbai_LBS_Marg_3,LBS Marg,19.0788,72.9047,19.0808,72.9067,medium,4619,40,3
+mumbai_LBS_Marg_4,LBS Marg,19.0808,72.9067,19.082800000000002,72.90870000000001,medium,2796,50,6
+mumbai_LBS_Marg_5,LBS Marg,19.082800000000002,72.90870000000001,19.0848,72.9107,medium,4808,60,4
+mumbai_LBS_Marg_6,LBS Marg,19.0848,72.9107,19.0868,72.9127,medium,2603,60,4
+mumbai_LBS_Marg_7,LBS Marg,19.0868,72.9127,19.0888,72.91470000000001,medium,1542,80,3
+mumbai_LBS_Marg_8,LBS Marg,19.0888,72.91470000000001,19.0908,72.9167,medium,4394,80,3
+mumbai_LBS_Marg_9,LBS Marg,19.0908,72.9167,19.0928,72.9187,medium,2822,40,2
+mumbai_SV_Road_Andheri_0,SV Road Andheri,19.1136,72.8347,19.1156,72.8367,medium,3433,80,4
+mumbai_SV_Road_Andheri_1,SV Road Andheri,19.1156,72.8367,19.117600000000003,72.8387,medium,545,50,6
+mumbai_SV_Road_Andheri_2,SV Road Andheri,19.117600000000003,72.8387,19.119600000000002,72.8407,medium,3520,40,4
+mumbai_SV_Road_Andheri_3,SV Road Andheri,19.119600000000002,72.8407,19.1216,72.8427,medium,4364,80,3
+mumbai_SV_Road_Andheri_4,SV Road Andheri,19.1216,72.8427,19.123600000000003,72.8447,medium,2622,40,6
+mumbai_SV_Road_Andheri_5,SV Road Andheri,19.123600000000003,72.8447,19.125600000000002,72.8467,medium,3933,60,6
+mumbai_SV_Road_Andheri_6,SV Road Andheri,19.125600000000002,72.8467,19.1276,72.8487,medium,4760,50,6
+mumbai_SV_Road_Andheri_7,SV Road Andheri,19.1276,72.8487,19.1296,72.8507,medium,3019,80,4
+mumbai_SV_Road_Andheri_8,SV Road Andheri,19.1296,72.8507,19.131600000000002,72.8527,medium,4260,60,2
+mumbai_SV_Road_Andheri_9,SV Road Andheri,19.131600000000002,72.8527,19.1336,72.8547,medium,1466,60,2
+mumbai_SV_Road_Andheri_10,SV Road Andheri,19.1336,72.8547,19.1356,72.8567,medium,4604,50,4
+mumbai_SV_Road_Andheri_11,SV Road Andheri,19.1356,72.8567,19.137600000000003,72.8587,medium,3438,80,6
+mumbai_Linking_Road_Bandra_0,Linking Road Bandra,19.0596,72.8295,19.0616,72.83149999999999,low,1556,60,4
+mumbai_Linking_Road_Bandra_1,Linking Road Bandra,19.0616,72.83149999999999,19.0636,72.8335,low,2145,60,6
+mumbai_Linking_Road_Bandra_2,Linking Road Bandra,19.0636,72.8335,19.0656,72.8355,low,4568,50,2
+mumbai_Linking_Road_Bandra_3,Linking Road Bandra,19.0656,72.8355,19.0676,72.83749999999999,low,1726,40,3
+mumbai_Linking_Road_Bandra_4,Linking Road Bandra,19.0676,72.83749999999999,19.0696,72.8395,low,4689,60,2
+mumbai_Linking_Road_Bandra_5,Linking Road Bandra,19.0696,72.8395,19.0716,72.8415,low,3058,80,4
+mumbai_Linking_Road_Bandra_6,Linking Road Bandra,19.0716,72.8415,19.0736,72.84349999999999,low,4474,50,4
+mumbai_Linking_Road_Bandra_7,Linking Road Bandra,19.0736,72.84349999999999,19.075599999999998,72.8455,low,1379,40,4
+mumbai_Marine_Drive_0,Marine Drive,18.9432,72.8236,18.9452,72.8256,low,3826,60,4
+mumbai_Marine_Drive_1,Marine Drive,18.9452,72.8256,18.947200000000002,72.8276,low,2142,60,4
+mumbai_Marine_Drive_2,Marine Drive,18.947200000000002,72.8276,18.9492,72.8296,low,2599,50,2
+mumbai_Marine_Drive_3,Marine Drive,18.9492,72.8296,18.9512,72.8316,low,4357,80,6
+mumbai_Marine_Drive_4,Marine Drive,18.9512,72.8316,18.953200000000002,72.8336,low,3055,60,2
+mumbai_Marine_Drive_5,Marine Drive,18.953200000000002,72.8336,18.9552,72.8356,low,775,60,6
+mumbai_Marine_Drive_6,Marine Drive,18.9552,72.8356,18.9572,72.8376,low,3703,40,2
+mumbai_Marine_Drive_7,Marine Drive,18.9572,72.8376,18.9592,72.8396,low,1280,60,2
+mumbai_Marine_Drive_8,Marine Drive,18.9592,72.8396,18.9612,72.8416,low,1422,80,4
+mumbai_Marine_Drive_9,Marine Drive,18.9612,72.8416,18.9632,72.8436,low,3373,40,3
+mumbai_Marine_Drive_10,Marine Drive,18.9632,72.8436,18.9652,72.8456,low,1239,50,6
+mumbai_Marine_Drive_11,Marine Drive,18.9652,72.8456,18.967200000000002,72.8476,low,3187,40,3
+mumbai_Worli_Sea_Link_0,Worli Sea Link,19.0176,72.8125,19.0196,72.8145,medium,2821,50,2
+mumbai_Worli_Sea_Link_1,Worli Sea Link,19.0196,72.8145,19.021600000000003,72.8165,medium,2453,50,2
+mumbai_Worli_Sea_Link_2,Worli Sea Link,19.021600000000003,72.8165,19.023600000000002,72.8185,medium,644,80,2
+mumbai_Worli_Sea_Link_3,Worli Sea Link,19.023600000000002,72.8185,19.0256,72.8205,medium,1204,60,3
+mumbai_Worli_Sea_Link_4,Worli Sea Link,19.0256,72.8205,19.027600000000003,72.8225,medium,3962,40,6
+mumbai_Worli_Sea_Link_5,Worli Sea Link,19.027600000000003,72.8225,19.029600000000002,72.8245,medium,863,50,6
+mumbai_Worli_Sea_Link_6,Worli Sea Link,19.029600000000002,72.8245,19.0316,72.8265,medium,1249,40,6
+mumbai_Worli_Sea_Link_7,Worli Sea Link,19.0316,72.8265,19.0336,72.8285,medium,2311,60,2
+mumbai_Jogeshwari-Vikhroli_Link_Road_0,Jogeshwari-Vikhroli Link Road,19.1258,72.9167,19.1278,72.9187,high,4171,40,4
+mumbai_Jogeshwari-Vikhroli_Link_Road_1,Jogeshwari-Vikhroli Link Road,19.1278,72.9187,19.129800000000003,72.92070000000001,high,2735,40,4
+mumbai_Jogeshwari-Vikhroli_Link_Road_2,Jogeshwari-Vikhroli Link Road,19.129800000000003,72.92070000000001,19.131800000000002,72.9227,high,551,60,6
+mumbai_Jogeshwari-Vikhroli_Link_Road_3,Jogeshwari-Vikhroli Link Road,19.131800000000002,72.9227,19.1338,72.9247,high,771,80,2
+mumbai_Jogeshwari-Vikhroli_Link_Road_4,Jogeshwari-Vikhroli Link Road,19.1338,72.9247,19.135800000000003,72.92670000000001,high,1291,60,4
+mumbai_Jogeshwari-Vikhroli_Link_Road_5,Jogeshwari-Vikhroli Link Road,19.135800000000003,72.92670000000001,19.137800000000002,72.9287,high,4592,60,2
+mumbai_Jogeshwari-Vikhroli_Link_Road_6,Jogeshwari-Vikhroli Link Road,19.137800000000002,72.9287,19.1398,72.9307,high,4835,40,6
+mumbai_Jogeshwari-Vikhroli_Link_Road_7,Jogeshwari-Vikhroli Link Road,19.1398,72.9307,19.1418,72.93270000000001,high,3104,50,4
+mumbai_Ghodbunder_Road_0,Ghodbunder Road,19.2183,72.9781,19.220299999999998,72.9801,high,1967,40,6
+mumbai_Ghodbunder_Road_1,Ghodbunder Road,19.220299999999998,72.9801,19.2223,72.9821,high,1265,80,4
+mumbai_Ghodbunder_Road_2,Ghodbunder Road,19.2223,72.9821,19.2243,72.9841,high,3616,50,6
+mumbai_Ghodbunder_Road_3,Ghodbunder Road,19.2243,72.9841,19.2263,72.9861,high,4692,50,2
+mumbai_Ghodbunder_Road_4,Ghodbunder Road,19.2263,72.9861,19.2283,72.9881,high,2616,40,6
+mumbai_Ghodbunder_Road_5,Ghodbunder Road,19.2283,72.9881,19.2303,72.9901,high,3371,50,4
+mumbai_Ghodbunder_Road_6,Ghodbunder Road,19.2303,72.9901,19.2323,72.9921,high,1057,50,3
+mumbai_Ghodbunder_Road_7,Ghodbunder Road,19.2323,72.9921,19.234299999999998,72.9941,high,2644,60,2
+mumbai_Ghodbunder_Road_8,Ghodbunder Road,19.234299999999998,72.9941,19.2363,72.9961,high,1058,80,6

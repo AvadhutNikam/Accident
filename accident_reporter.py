@@ -29,9 +29,30 @@ class AccidentReporter:
             upvotes INTEGER DEFAULT 0,
             downvotes INTEGER DEFAULT 0,
             verified BOOLEAN DEFAULT 0,
-            expires_at TEXT
+            expires_at TEXT,
+            processed BOOLEAN DEFAULT 0
         )
         ''')
+        
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS accident_votes (
+            user_id TEXT,
+            accident_id TEXT,
+            vote_type TEXT,
+            PRIMARY KEY (user_id, accident_id)
+        )
+        ''')
+        
+        # Safe schema migration for existing databases
+        try:
+            cursor.execute("ALTER TABLE accidents ADD COLUMN processed BOOLEAN DEFAULT 0")
+        except sqlite3.OperationalError:
+            pass # Column already exists
+        try:
+            cursor.execute("ALTER TABLE accidents ADD COLUMN user_id TEXT")
+        except sqlite3.OperationalError:
+            pass
+            
         conn.commit()
         conn.close()
     
@@ -49,10 +70,10 @@ class AccidentReporter:
         conn = self._get_connection()
         cursor = conn.cursor()
         cursor.execute('''
-            INSERT INTO accidents (id, timestamp, latitude, longitude, severity, description, verified, expires_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO accidents (id, timestamp, latitude, longitude, severity, description, verified, expires_at, processed, user_id)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, ?)
         ''', (accident_id, timestamp, round(latitude, 6), round(longitude, 6), 
-              severity.lower(), description, False, expires_at))
+              severity.lower(), description, False, expires_at, user_id))
         conn.commit()
         conn.close()
         
@@ -66,7 +87,8 @@ class AccidentReporter:
             'upvotes': 0,
             'downvotes': 0,
             'verified': False,
-            'expires_at': expires_at
+            'expires_at': expires_at,
+            'user_id': user_id
         }
     
     def get_active_accidents(self) -> List[Dict]:
@@ -91,6 +113,34 @@ class AccidentReporter:
             
         conn.close()
         return accidents
+        
+    def get_unprocessed_verified_accidents(self) -> List[Dict]:
+        """Fetch verified accidents that haven't been fed to the ML model yet."""
+        conn = self._get_connection()
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        
+        # Fetching strictly where verified=1 and processed=0
+        cursor.execute('SELECT * FROM accidents WHERE verified = 1 AND processed = 0')
+        rows = cursor.fetchall()
+        
+        accidents = [dict(row) for row in rows]
+        conn.close()
+        return accidents
+        
+    def mark_accidents_processed(self, accident_ids: List[str]):
+        """Flag a list of accident IDs as completely processed."""
+        if not accident_ids:
+            return
+            
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        
+        placeholders = ','.join(['?'] * len(accident_ids))
+        cursor.execute(f'UPDATE accidents SET processed = 1 WHERE id IN ({placeholders})', accident_ids)
+        
+        conn.commit()
+        conn.close()
     
     def get_accidents_near_location(self, latitude: float, longitude: float, 
                                     radius_km: float = 2.0) -> List[Dict]:
@@ -131,12 +181,20 @@ class AccidentReporter:
         
         return route_accidents
     
-    def vote_accident(self, accident_id: str, vote_type: str) -> bool:
+    def vote_accident(self, accident_id: str, vote_type: str, user_id: str) -> bool:
         """Upvote or downvote an accident report in SQLite."""
+        if not user_id: return False
+        
         conn = self._get_connection()
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
         
+        # Check if user already voted
+        cursor.execute('SELECT * FROM accident_votes WHERE user_id = ? AND accident_id = ?', (user_id, accident_id))
+        if cursor.fetchone():
+            conn.close()
+            return False
+            
         cursor.execute('SELECT * FROM accidents WHERE id = ?', (accident_id,))
         acc = cursor.fetchone()
         
@@ -155,8 +213,12 @@ class AccidentReporter:
         elif vote_type == 'down':
             downvotes += 1
             
+        # Record the vote to prevent dupes
+        cursor.execute('INSERT INTO accident_votes (user_id, accident_id, vote_type) VALUES (?, ?, ?)', (user_id, accident_id, vote_type))
+            
         if downvotes >= 5:
             cursor.execute('DELETE FROM accidents WHERE id = ?', (accident_id,))
+            cursor.execute('DELETE FROM accident_votes WHERE accident_id = ?', (accident_id,))
         else:
             cursor.execute('''
                 UPDATE accidents 

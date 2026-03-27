@@ -15,6 +15,12 @@ let geocoder = null;
 let riskChart = null;
 let riskHeatmapLayer = null;
 let currentCity = 'mumbai';
+let originMarker = null;
+let destinationMarker = null;
+let simulationMarker = null;
+let simulationAnimation = null;
+let currentUser = null;
+let isAuthMode = 'login';
 
 // ═══════════════════════════════════════════════════════
 // 🚗 VEHICLE CONFIG
@@ -103,6 +109,9 @@ function initMap() {
     // Initialize city selector
     initCitySelector();
 
+    // Setup Auth System
+    checkAuthStatus();
+
     // Final check for size
     setTimeout(() => map.invalidateSize(), 500);
 }
@@ -126,6 +135,10 @@ async function switchCity(cityId) {
     // Clear existing map data
     routeLayers.forEach(l => map.removeLayer(l));
     routeLayers = [];
+    if (originMarker) { map.removeLayer(originMarker); originMarker = null; }
+    if (destinationMarker) { map.removeLayer(destinationMarker); destinationMarker = null; }
+    if (simulationMarker) { map.removeLayer(simulationMarker); simulationMarker = null; }
+    if (simulationAnimation) { clearInterval(simulationAnimation); simulationAnimation = null; }
     accidentMarkers.forEach(m => map.removeLayer(m));
     accidentMarkers = [];
     if (riskHeatmapLayer) {
@@ -471,9 +484,36 @@ function getRiskColor(score) {
 function displayRoutes(routes) {
     routeLayers.forEach(l => map.removeLayer(l));
     routeLayers = [];
+    if (originMarker) { map.removeLayer(originMarker); originMarker = null; }
+    if (destinationMarker) { map.removeLayer(destinationMarker); destinationMarker = null; }
+
+    if (routes.length > 0) {
+        const firstRoute = routes[0];
+        const startPoint = firstRoute.waypoints[0];
+        const endPoint = firstRoute.waypoints[firstRoute.waypoints.length - 1];
+
+        originMarker = L.marker(startPoint, {
+            icon: L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div style='background-color:#28a745;width:15px;height:15px;border-radius:50%;border:2px solid white;box-shadow:0 0 5px rgba(0,0,0,0.5);'></div>",
+                iconSize: [15, 15],
+                iconAnchor: [7, 7]
+            })
+        }).addTo(map).bindPopup("<b>Starting Point</b>");
+
+        destinationMarker = L.marker(endPoint, {
+            icon: L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div style='background-color:#dc3545;width:15px;height:15px;border-radius:50%;border:2px solid white;box-shadow:0 0 5px rgba(0,0,0,0.5);'></div>",
+                iconSize: [15, 15],
+                iconAnchor: [7, 7]
+            })
+        }).addTo(map).bindPopup("<b>Destination</b>");
+    }
 
     routes.forEach(route => {
         const routeGroup = L.featureGroup().addTo(map);
+        routeGroup.routeId = route.id;
 
         // Draw individual segments with different colors
         for (let i = 0; i < route.waypoints.length - 1; i++) {
@@ -532,7 +572,7 @@ function selectRoute(routeId) {
 
     // Update map polylines
     routeLayers.forEach(layer => {
-        if (layer.options && layer.options.routeId === routeId) {
+        if (layer.routeId === routeId) {
             layer.setStyle({ weight: 8, opacity: 1.0 });
             layer.bringToFront();
         } else {
@@ -620,18 +660,152 @@ function showRouteDetails(route) {
     `;
 
     document.getElementById('routeDetails').style.display = 'block';
+    
+    const simControls = document.getElementById('simulationControls');
+    if (simControls) simControls.style.display = 'flex';
+    
+    const stopBtn = document.getElementById('stopSimulateBtn');
+    if (stopBtn) stopBtn.style.display = 'none';
+    
+    const simBtn = document.getElementById('simulateDriveBtn');
+    if(simBtn) simBtn.innerHTML = '<i class="fas fa-satellite-dish me-2"></i> Run Demo Simulation';
 }
+
+// ═══════════════════════════════════════════════════════
+// 🚗 VOICE NAVIGATION SIMULATOR
+// ═══════════════════════════════════════════════════════
+
+function startSimulation() {
+    if (!selectedRouteId) return showToast('error', 'Select a route first');
+    const route = currentRoutes.find(r => r.id === selectedRouteId);
+    if (!route || !route.waypoints || route.waypoints.length === 0) return;
+    
+    // Reset previous simulation
+    if (simulationAnimation) clearInterval(simulationAnimation);
+    if (simulationMarker) map.removeLayer(simulationMarker);
+    
+    const wp = route.waypoints;
+    let currentIdx = 0;
+    
+    // Create animated Car Icon
+    const carIcon = L.divIcon({
+        className: 'sim-car-icon',
+        html: '<div style="background:#fff; border-radius:50%; padding:2px; box-shadow:0 0 10px rgba(0,0,0,0.5); font-size:20px; width:36px; height:36px; display:flex; align-items:center; justify-content:center;">🚗</div>',
+        iconSize: [36, 36],
+        iconAnchor: [18, 18]
+    });
+    
+    simulationMarker = L.marker(wp[0], {icon: carIcon, zIndexOffset: 2000}).addTo(map);
+    map.setView(wp[0], 16);
+    
+    speakAlert("SafePath demo mode activated. Simulating vehicle trajectory.");
+    
+    const simBtn = document.getElementById('simulateDriveBtn');
+    if(simBtn) simBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Driving...';
+    
+    const stopBtn = document.getElementById('stopSimulateBtn');
+    if (stopBtn) stopBtn.style.display = 'block';
+    
+    // Downsample massive routes to keep simulation smooth (~15-20 frames max for demo)
+    const stepSize = Math.max(1, Math.floor(wp.length / 20));
+    const smoothPoints = [];
+    for(let i=0; i<wp.length; i+=stepSize) smoothPoints.push(i);
+    if(smoothPoints[smoothPoints.length-1] !== wp.length-1) smoothPoints.push(wp.length-1);
+
+    let progressIdx = 0;
+    
+    simulationAnimation = setInterval(() => {
+        progressIdx++;
+        if (progressIdx >= smoothPoints.length) {
+            clearInterval(simulationAnimation);
+            speakAlert("Simulation complete. Destination reached.");
+            if(simBtn) simBtn.innerHTML = '<i class="fas fa-satellite-dish me-2"></i> Run Demo Again';
+            if (stopBtn) stopBtn.style.display = 'none';
+            return;
+        }
+        
+        currentIdx = smoothPoints[progressIdx];
+        const pos = wp[currentIdx];
+        
+        simulationMarker.setLatLng(pos);
+        map.panTo(pos, {animate: true, duration: 1.0});
+        
+        // Hazard Check (Lookup corresponding risk detail, index offsets might apply)
+        const riskData = route.risk_details[Math.min(currentIdx, route.risk_details.length - 1)];
+        if (riskData && riskData.risk > 60) {
+            // Avoid spamming the same road warning
+            if (!simulationMarker._lastAlertPhase || progressIdx - simulationMarker._lastAlertPhase > 3) {
+                const roadStr = riskData.road && riskData.road !== "Unknown Segment" ? ` on ${riskData.road}` : '';
+                speakAlert(`Caution: Approaching a high-risk zone${roadStr}. Reduce your speed immediately.`);
+                simulationMarker._lastAlertPhase = progressIdx;
+            }
+        }
+        
+    }, 1500); // Wait 1.5 seconds between leaps
+}
+
+function stopSimulation() {
+    if (simulationAnimation) {
+        clearInterval(simulationAnimation);
+        simulationAnimation = null;
+    }
+    if (simulationMarker) {
+        map.removeLayer(simulationMarker);
+        simulationMarker = null;
+    }
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
+    
+    const simBtn = document.getElementById('simulateDriveBtn');
+    if(simBtn) simBtn.innerHTML = '<i class="fas fa-satellite-dish me-2"></i> Run Demo Simulation';
+    
+    const stopBtn = document.getElementById('stopSimulateBtn');
+    if (stopBtn) stopBtn.style.display = 'none';
+}
+
+function speakAlert(text) {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel(); // Clear queue immediately
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.95;
+        utterance.pitch = 1.0;
+        utterance.volume = 1.0;
+        
+        // Try to pick a clear English voice if available
+        const voices = window.speechSynthesis.getVoices();
+        const enVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Samantha')));
+        if (enVoice) utterance.voice = enVoice;
+        
+        window.speechSynthesis.speak(utterance);
+    }
+}
+
+// Ensure voices are loaded
+window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
 
 // ═══════════════════════════════════════════════════════
 // ACCIDENT REPORTING & DISPLAY
 // ═══════════════════════════════════════════════════════
 
 document.getElementById('enableReportMode')?.addEventListener('click', () => {
+    if (!currentUser) {
+        showToast('error', 'Authentication required to report hazards.');
+        openAuthModal('login');
+        return;
+    }
     accidentReportMode = true;
     showToast('success', 'Click on map to report accident');
 });
 
 document.getElementById('submitAccidentReport')?.addEventListener('click', async () => {
+    if (!currentUser) {
+        cancelAccidentReport();
+        openAuthModal('login');
+        showToast('error', 'Authentication required.');
+        return;
+    }
+
     if (!selectedAccidentLocation) {
         showToast('error', 'Select location first');
         return;
@@ -706,7 +880,21 @@ async function loadActiveAccidents() {
                 });
 
                 const marker = L.marker([acc.latitude, acc.longitude], { icon: icon }).addTo(map);
-                marker.bindPopup(`<b>${acc.severity.toUpperCase()} Accident</b><br>${acc.description || 'Watch out for delays.'}`);
+                const popupContent = `
+                    <div class="text-center" style="min-width: 150px;">
+                        <b>${acc.severity.toUpperCase()} Accident</b><br>
+                        <span class="small text-muted">${acc.description || 'Watch out for delays.'}</span>
+                        <hr class="my-2 border-secondary">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-success fw-bold"><i class="fas fa-arrow-up"></i> ${acc.upvotes}</span>
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-success py-0 px-2" onclick="voteAccident('${acc.id}', 'up')"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="voteAccident('${acc.id}', 'down')"><i class="fas fa-thumbs-down"></i></button>
+                            </div>
+                            <span class="small text-danger fw-bold"><i class="fas fa-arrow-down"></i> ${acc.downvotes}</span>
+                        </div>
+                    </div>`;
+                marker.bindPopup(popupContent);
                 accidentMarkers.push(marker);
             });
 
@@ -718,6 +906,129 @@ async function loadActiveAccidents() {
         console.error('Failed to load accidents:', e);
     }
 }
+
+// ═══════════════════════════════════════════════════════
+// AUTHENTICATION AND VOTING INTEGRATION
+// ═══════════════════════════════════════════════════════
+
+async function checkAuthStatus() {
+    try {
+        const resp = await fetch('/api/auth/me');
+        const data = await resp.json();
+        currentUser = data.authenticated ? data.user : null;
+        updateAuthUI();
+    } catch(e) { console.error('Auth verification failed', e); }
+}
+
+function updateAuthUI() {
+    const authContainer = document.getElementById('authUIContainer');
+    if (!authContainer) return;
+    
+    if (currentUser) {
+        authContainer.innerHTML = `
+            <div class="d-flex justify-content-between align-items-center w-100 p-2 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid var(--accent-primary);">
+                <div class="text-white small d-flex align-items-center">
+                    <i class="fas fa-user-circle text-primary me-2 fs-5"></i>
+                    <strong class="outfit-font">${currentUser.username}</strong>
+                </div>
+                <button class="btn btn-sm text-danger p-0 ms-2" title="Sign Out" onclick="logout()"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        `;
+    } else {
+        authContainer.innerHTML = `
+            <div class="d-flex gap-2 w-100">
+                <button class="secondary-action-btn sm flex-grow-1" onclick="openAuthModal('login')">Login</button>
+                <button class="primary-action-btn sm flex-grow-1" style="padding: 0;" onclick="openAuthModal('signup')">Sign Up</button>
+            </div>
+        `;
+    }
+}
+
+window.openAuthModal = function(mode) {
+    isAuthMode = mode;
+    document.getElementById('authModalTitle').textContent = mode === 'login' ? 'Sign In' : 'Create Account';
+    document.getElementById('authSubmitBtn').textContent = mode === 'login' ? 'Login' : 'Sign Up';
+    document.getElementById('authUsername').style.display = mode === 'login' ? 'none' : 'block';
+    
+    document.getElementById('authToggleText').textContent = mode === 'login' ? "Don't have an account?" : "Already have an account?";
+    document.getElementById('authToggleLink').textContent = mode === 'login' ? "Sign up" : "Login";
+    
+    document.getElementById('authForm').reset();
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('authModal')).show();
+};
+
+document.getElementById('authToggleLink')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    openAuthModal(isAuthMode === 'login' ? 'signup' : 'login');
+});
+
+document.getElementById('authForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const url = isAuthMode === 'login' ? '/api/auth/login' : '/api/auth/signup';
+    const body = { 
+        email: document.getElementById('authEmail').value, 
+        password: document.getElementById('authPassword').value 
+    };
+    
+    if (isAuthMode === 'signup') {
+        body.username = document.getElementById('authUsername').value;
+    }
+    
+    try {
+        const resp = await fetch(url, { 
+            method: 'POST', 
+            headers: {'Content-Type': 'application/json'}, 
+            body: JSON.stringify(body) 
+        });
+        const data = await resp.json();
+        
+        if (data.success) {
+            bootstrap.Modal.getInstance(document.getElementById('authModal')).hide();
+            showToast('success', isAuthMode === 'login' ? 'Logged in successfully' : 'Account created');
+            checkAuthStatus(); // Reloads user globally
+        } else {
+            showToast('error', data.error || 'Authentication error');
+        }
+    } catch(err) { 
+        showToast('error', 'Network error during authentication'); 
+    }
+});
+
+window.logout = async function() {
+    try {
+        await fetch('/api/auth/logout', { method: 'POST' });
+        showToast('info', 'Logged out');
+        checkAuthStatus();
+    } catch(err) {
+        console.error(err);
+    }
+};
+
+window.voteAccident = async function(accidentId, voteType) {
+    if (!currentUser) {
+        showToast('error', 'Authentication required to verify hazards.');
+        openAuthModal('login');
+        return;
+    }
+    
+    try {
+        const resp = await fetch('/api/accidents/vote', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({accident_id: accidentId, vote_type: voteType, city: currentCity})
+        });
+        const data = await resp.json();
+        
+        if (data.success) {
+            showToast('success', 'Vote processed successfully.');
+            loadActiveAccidents(); // Refresh popups
+        } else {
+            showToast('error', data.error || 'You have already voted on this hazard.');
+        }
+    } catch(e) {
+        showToast('error', 'Network connection failed.');
+    }
+};
 
 // ═══════════════════════════════════════════════════════
 // FOOLPROOF MODAL TRIGGERS (FAVORITES & WHATSAPP)
